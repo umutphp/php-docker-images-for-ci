@@ -40,10 +40,8 @@ RUN curl -L http://get.sensiolabs.org/security-checker.phar -o security-checker.
 
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer -o composer-setup.php && \
-    php composer-setup.php --install-dir=/usr/local/bin --filename=composer
-
-# Install PHP Assumptions
-RUN composer require --dev rskuipers/php-assumptions
+    php composer-setup.php --install-dir=/usr/local/bin --filename=composer && \
+    composer config -g repo.packagist composer https://packagist.phpcomposer.com
 
 # Install PhpMetrics
 RUN curl -OL https://github.com/phpmetrics/PhpMetrics/releases/download/v2.3.2/phpmetrics.phar && \
