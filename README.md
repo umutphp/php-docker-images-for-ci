@@ -23,6 +23,18 @@ A repository with a set of Docker files created from official PHP images with so
 docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 phpcs /app
 ```
 
+* A sample execution for [SensioLabs Security Checker](https://github.com/sensiolabs/security-checker);
+
+```
+docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 security-checker security:check /app/composer.lock
+```
+
+* A sample execution for [Psecio Parse](https://github.com/psecio/parse);
+
+```
+docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 /root/.composer/vendor/bin/psecio-parse scan /app
+```
+
 ## How to Use in Gitlab CI ##
 You need to enable Docker executors on Gitlab CI. You can find sample job definitions for executing the tools on Gitlab CI pipeline for your repo. 
 
