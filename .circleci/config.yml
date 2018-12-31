@@ -12,16 +12,7 @@ jobs:
 
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ tar c "./images/" | checksum }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
       - run: npm install -g dockerlint
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ tar c "./images/" | checksum }}
       - run: dockerlint ~/repo/images/7.0/Dockerfile
       - run: dockerlint ~/repo/images/7.1/Dockerfile
       - run: dockerlint ~/repo/images/7.2/Dockerfile
