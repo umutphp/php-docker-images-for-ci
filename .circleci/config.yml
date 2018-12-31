@@ -16,3 +16,10 @@ jobs:
       - run: dockerlint ~/repo/images/7.0/Dockerfile
       - run: dockerlint ~/repo/images/7.1/Dockerfile
       - run: dockerlint ~/repo/images/7.2/Dockerfile
+      - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
+      - run: docker build -t umutphp/php-docker-images-for-ci:7.0 - < ~/repo/images/7.0/Dockerfile
+      - run: docker push umutphp/php-docker-images-for-ci:7.0
+      - run: docker build -t umutphp/php-docker-images-for-ci:7.1 - < ~/repo/images/7.1/Dockerfile
+      - run: docker push umutphp/php-docker-images-for-ci:7.1
+      - run: docker build -t umutphp/php-docker-images-for-ci:7.2 - < ~/repo/images/7.2/Dockerfile
+      - run: docker push umutphp/php-docker-images-for-ci:7.2
