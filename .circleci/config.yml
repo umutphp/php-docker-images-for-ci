@@ -4,7 +4,7 @@
 #
 version: 2
 jobs:
-  build:
+  build-7.0:
     docker:
       - image: circleci/node:7.10
 
@@ -14,16 +14,52 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-{{ checksum "./images/7.0/Dockerfile" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
       - run: npm install -g dockerlint
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: v1-dependencies-{{ checksum "./images/7.0/Dockerfile" }}
       - run: dockerlint ~/repo/images/7.0/Dockerfile
+  build-7.1:
+    docker:
+      - image: circleci/node:7.10
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "./images/7.1/Dockerfile" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+      - run: npm install -g dockerlint
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "./images/7.1/Dockerfile" }}
       - run: dockerlint ~/repo/images/7.1/Dockerfile
+  build-7.2:
+    docker:
+      - image: circleci/node:7.10
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "./images/7.2/Dockerfile" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+      - run: npm install -g dockerlint
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "./images/7.2/Dockerfile" }}
       - run: dockerlint ~/repo/images/7.2/Dockerfile
 
 
