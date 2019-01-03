@@ -58,3 +58,6 @@ RUN composer global require --dev jakub-onderka/php-parallel-lint
 
 # Install Magic Number detecter
 RUN cd /root && composer require povils/phpmnd && cd -
+
+# Install composer.json fixer
+RUN composer global require kubawerlos/composer-json-fixer
