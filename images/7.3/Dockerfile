@@ -14,9 +14,6 @@ RUN docker-php-ext-install \
     mysqli \
     xml
 
-RUN pecl install mcrypt-1.0.1 && \
-    docker-php-ext-enable mcrypt
-
 # Install PHP Code Sniffer
 RUN curl -L https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar -o phpcs && \
     curl -L https://squizlabs.github.io/PHP_CodeSniffer/phpcbf.phar -o phpcbf && \
