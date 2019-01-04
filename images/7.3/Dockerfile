@@ -1,19 +1,21 @@
-FROM php:7.1.24
+FROM php:7.3
 
 # disable interactive functions
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && \
-    apt-get -y --no-install-recommends install libmcrypt-dev libreadline-dev zlib1g-dev libxml2-dev apt-utils mysql-client curl git && \
+    apt-get -y install --no-install-recommends libmcrypt-dev libreadline-dev zlib1g-dev libxml2-dev apt-utils mysql-client curl git && \
     rm -rf /var/lib/apt/lists/*
 
 RUN docker-php-ext-install \
     mbstring \
-    mcrypt \
     zip \
     pdo_mysql \
     mysqli \
     xml
+
+RUN pecl install mcrypt-1.0.1 && \
+    docker-php-ext-enable mcrypt
 
 # Install PHP Code Sniffer
 RUN curl -L https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar -o phpcs && \
@@ -49,6 +51,12 @@ RUN curl -OL https://github.com/phpmetrics/PhpMetrics/releases/download/v2.3.2/p
 
 # Install Psecio Parse
 RUN composer global require --dev psecio/parse
+
+# Install phpcs-security-audit v2 sniffes
+RUN mkdir -p /opt/phpcs/snifss/ && \
+    cd /opt/phpcs/snifss/ && \
+    git clone -b master https://github.com/FloeDesignTechnologies/phpcs-security-audit.git phpcs-security-audit && \
+    phpcs --config-set installed_paths /opt/phpcs/snifss/phpcs-security-audit/
 
 # Install PHP-Var-Dump-Check
 RUN composer global require --dev jakub-onderka/php-var-dump-check

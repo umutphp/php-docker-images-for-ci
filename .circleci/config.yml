@@ -14,6 +14,7 @@ jobs:
       - run: dockerlint ~/repo/images/7.0/Dockerfile
       - run: dockerlint ~/repo/images/7.1/Dockerfile
       - run: dockerlint ~/repo/images/7.2/Dockerfile
+      - run: dockerlint ~/repo/images/7.3/Dockerfile
   create_images:
     machine: true
     working_directory: ~/repo
@@ -26,6 +27,8 @@ jobs:
       - run: docker push umutphp/php-docker-images-for-ci:7.1
       - run: docker build -t umutphp/php-docker-images-for-ci:7.2 - < ~/repo/images/7.2/Dockerfile
       - run: docker push umutphp/php-docker-images-for-ci:7.2
+      - run: docker build -t umutphp/php-docker-images-for-ci:7.3 - < ~/repo/images/7.3/Dockerfile
+      - run: docker push umutphp/php-docker-images-for-ci:7.3
 
 workflows:
   version: 2
