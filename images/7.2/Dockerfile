@@ -65,4 +65,7 @@ RUN composer global require --dev jakub-onderka/php-var-dump-check
 RUN composer global require --dev jakub-onderka/php-parallel-lint
 
 # Install Magic Number detecter
-RUN composer require povils/phpmnd
+RUN cd /root && composer require povils/phpmnd && cd -
+
+# Install composer.json fixer
+RUN composer global require kubawerlos/composer-json-fixer
