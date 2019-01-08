@@ -10,6 +10,7 @@ RUN apt-get update && \
 RUN docker-php-ext-install \
     mbstring \
     zip \
+    unzip \
     pdo_mysql \
     mysqli \
     xml

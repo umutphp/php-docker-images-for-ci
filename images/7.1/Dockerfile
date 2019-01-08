@@ -11,6 +11,7 @@ RUN docker-php-ext-install \
     mbstring \
     mcrypt \
     zip \
+    unzip \
     pdo_mysql \
     mysqli \
     xml
