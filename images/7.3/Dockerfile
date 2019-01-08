@@ -4,13 +4,12 @@ FROM php:7.3
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && \
-    apt-get -y install --no-install-recommends libmcrypt-dev libreadline-dev zlib1g-dev libxml2-dev libzip-dev apt-utils mysql-client curl git && \
+    apt-get -y install --no-install-recommends libmcrypt-dev libreadline-dev zlib1g-dev libxml2-dev libzip-dev apt-utils mysql-client curl git zip unzip && \
     rm -rf /var/lib/apt/lists/*
 
 RUN docker-php-ext-install \
     mbstring \
     zip \
-    unzip \
     pdo_mysql \
     mysqli \
     xml

@@ -4,14 +4,13 @@ FROM php:5.6.39
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && \
-    apt-get -y --no-install-recommends install libmcrypt-dev libreadline-dev zlib1g-dev libxml2-dev apt-utils mysql-client curl git && \
+    apt-get -y --no-install-recommends install libmcrypt-dev libreadline-dev zlib1g-dev libxml2-dev apt-utils mysql-client curl git zip unzip && \
     rm -rf /var/lib/apt/lists/*
 
 RUN docker-php-ext-install \
     mbstring \
     mcrypt \
     zip \
-    unzip \
     pdo_mysql \
     mysqli \
     xml
