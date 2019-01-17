@@ -1,6 +1,13 @@
 # php-docker-images-for-ci
 
-A repository with a set of Docker files created from official PHP images with some CI tools
+A repository with a set of Docker files created from official PHP images (latest version per master master branches) with some CI tools.
+
+List of images;
+- php:5.6
+- php:7.0
+- php:7.1
+- php:7.2
+- php:7.3
 
 ## List of CI Tools ##
 - [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer)
