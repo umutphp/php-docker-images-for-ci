@@ -1,5 +1,7 @@
 # php-docker-images-for-ci
 
+[![CircleCI](https://circleci.com/gh/umutphp/php-docker-images-for-ci/tree/master.svg?style=svg)](https://circleci.com/gh/umutphp/php-docker-images-for-ci/tree/master)
+
 A repository with a set of Docker files created from official PHP images (latest version per master master branches) with some CI tools.
 
 List of images;
