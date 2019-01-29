@@ -77,5 +77,5 @@ security_psecio_parse:
     stage: stage_name
     image: umutphp/php-docker-images-for-ci:7.1
     script:
-        - /root/.composer/vendor/bin/psecio-parse scan /psth/to/your/codebase/
+        - /tools/bin/psecio-parse/.composer/vendor/bin/psecio-parse scan /path/to/your/codebase/
 ```

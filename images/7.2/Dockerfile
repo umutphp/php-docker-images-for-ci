@@ -78,7 +78,7 @@ RUN mkdir -p /tools/jakub-onderka/php-parallel-lint && \
 
 # Install Magic Number Detecter
 RUN mkdir -p /tools/povils/phpmnd && \
-    cd /tools/require povils/phpmnd && \
+    cd /tools/povils/phpmnd && \
     composer require povils/phpmnd && \
     cd -
 
