@@ -47,17 +47,36 @@ RUN curl -sS https://getcomposer.org/installer -o composer-setup.php && \
 RUN curl -OL https://github.com/phpmetrics/PhpMetrics/releases/download/v2.3.2/phpmetrics.phar && \
     chmod +x phpmetrics.phar && mv phpmetrics.phar /usr/local/bin/phpmetrics
 
+# Create tools folder
+RUN mkdir -p /tools
+
 # Install Psecio Parse
-RUN composer global require --dev psecio/parse
+RUN mkdir -p /tools/psecio/parse && \
+    cd /tools/psecio/parse && \
+    composer global require --dev psecio/parse && \
+    cd -
 
 # Install PHP-Var-Dump-Check
-RUN composer global require --dev jakub-onderka/php-var-dump-check
+RUN mkdir -p /tools/jakub-onderka/php-var-dump-check && \
+    cd /tools/jakub-onderka/php-var-dump-check && \
+    composer global require --dev jakub-onderka/php-var-dump-check && \
+    cd -
 
 # Install PHP-Parallel-Lint
-RUN composer global require --dev jakub-onderka/php-parallel-lint
+RUN mkdir -p /tools/jakub-onderka/php-parallel-lint && \
+    cd /tools/jakub-onderka/php-parallel-lint && \
+    composer global require --dev jakub-onderka/php-parallel-lint && \
+    cd -
 
-# Install Magic Number detecter
-RUN cd /root && composer require povils/phpmnd && cd -
+# Install Magic Number Detecter
+RUN mkdir -p /tools/povils/phpmnd && \
+    cd /tools/require povils/phpmnd && \
+    composer require povils/phpmnd && \
+    cd -
 
 # Install composer.json fixer
-RUN composer global require kubawerlos/composer-json-fixer
+RUN mkdir -p /tools/kubawerlos/composer-json-fixer && \
+    cd /tools/kubawerlos/composer-json-fixer && \
+    composer global require kubawerlos/composer-json-fixer && \
+    cd -
+
