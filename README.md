@@ -2,9 +2,11 @@
 
 [![CircleCI](https://circleci.com/gh/umutphp/php-docker-images-for-ci/tree/master.svg?style=svg)](https://circleci.com/gh/umutphp/php-docker-images-for-ci/tree/master)
 
-A repository with a set of Docker files created from official PHP images (latest version per master master branches) with some CI tools.
+A repository  of Docker files to create images from official PHP images (latest version per master master branches) with some CI tools installed. 
 
-List of images;
+The tools that are installed by Composer are isolated by using different folder per tool and linked to `/usr/local/bin` folder.
+
+## List of PHP Images ##
 - php:5.6
 - php:7.0
 - php:7.1
@@ -24,8 +26,8 @@ List of images;
 - [composer.json fixer](https://github.com/kubawerlos/composer-json-fixer)
 
 ## How to use ##
-1. **Directly From Docker Hub:** You use the images already built from [umutphp/php-docker-images-for-ci](https://cloud.docker.com/repository/registry-1.docker.io/umutphp/php-docker-images-for-ci).
-2. **Build Your Own:** Copy the Dockerfile and build your own image.
+1. **Directly From Docker Hub:** You use the images already built from [umutphp/php-docker-images-for-ci](https://hub.docker.com/r/umutphp/php-docker-images-for-ci).
+2. **Build Your Own:** Copy any of the Dockerfile files and build your own image.
 
 ## How to use images locally ##
 * A sample execution for [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer);
