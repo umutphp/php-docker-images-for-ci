@@ -89,5 +89,5 @@ RUN mkdir -p /tools/kubawerlos/composer-json-fixer && \
     cd -
 
 # Add update script
-ADD update.sh /update.sh
+ADD https://raw.githubusercontent.com/umutphp/php-docker-images-for-ci/master/scripts/update.sh /update.sh
 RUN chmod +x /update.sh

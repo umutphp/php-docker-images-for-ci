@@ -39,7 +39,7 @@ jobs:
       - run:
           name: Build-5-6
           no_output_timeout: 20m
-          command: cp -rf ~/repo/scripts/update.sh ~/repo/images/5.6/ && docker build -t umutphp/php-docker-images-for-ci:5.6 - < ~/repo/images/5.6/Dockerfile
+          command: docker build -t umutphp/php-docker-images-for-ci:5.6 - < ~/repo/images/5.6/Dockerfile
       - run:
           name: Push-5-6
           no_output_timeout: 20m
@@ -47,7 +47,7 @@ jobs:
       - run:
           name: Build-7-0
           no_output_timeout: 20m
-          command: cp -rf ~/repo/scripts/update.sh ~/repo/images/7.0/ && docker build -t umutphp/php-docker-images-for-ci:7.0 - < ~/repo/images/7.0/Dockerfile
+          command: docker build -t umutphp/php-docker-images-for-ci:7.0 - < ~/repo/images/7.0/Dockerfile
       - run:
           name: Push-7-0
           no_output_timeout: 20m
@@ -55,7 +55,7 @@ jobs:
       - run:
           name: Build-7-1
           no_output_timeout: 20m
-          command: cp -rf ~/repo/scripts/update.sh ~/repo/images/7.1/ && docker build -t umutphp/php-docker-images-for-ci:7.1 - < ~/repo/images/7.1/Dockerfile
+          command: docker build -t umutphp/php-docker-images-for-ci:7.1 - < ~/repo/images/7.1/Dockerfile
       - run:
           name: Push-7-1
           no_output_timeout: 20m
@@ -63,7 +63,7 @@ jobs:
       - run:
           name: Build-7-2
           no_output_timeout: 20m
-          command: cp -rf ~/repo/scripts/update.sh ~/repo/images/7.2/ && docker build -t umutphp/php-docker-images-for-ci:7.2 - < ~/repo/images/7.2/Dockerfile
+          command: docker build -t umutphp/php-docker-images-for-ci:7.2 - < ~/repo/images/7.2/Dockerfile
       - run:
           name: Push-7-2
           no_output_timeout: 20m
@@ -71,7 +71,7 @@ jobs:
       - run:
           name: Build-7-3
           no_output_timeout: 20m
-          command: cp -rf ~/repo/scripts/update.sh ~/repo/images/7.3/ && docker build -t umutphp/php-docker-images-for-ci:7.3 - < ~/repo/images/7.3/Dockerfile
+          command: docker build -t umutphp/php-docker-images-for-ci:7.3 - < ~/repo/images/7.3/Dockerfile
       - run:
           name: Push-7-3
           no_output_timeout: 20m
