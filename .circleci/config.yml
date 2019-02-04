@@ -37,6 +37,9 @@ jobs:
           name: DockerLogin
           command: docker login -u $DOCKER_USER -p $DOCKER_PASS
       - run:
+          name: CopyUpdateScripts
+          command: cp -rf ~/repo/scripts ~/repo/images/5.6/ && cp -rf ~/repo/scripts ~/repo/images/7.0/ && cp -rf ~/repo/scripts ~/repo/images/7.1/ && cp -rf ~/repo/scripts ~/repo/images/7.2/ && cp -rf ~/repo/scripts ~/repo/images/7.3/
+      - run:
           name: Build-5-6
           no_output_timeout: 20m
           command: docker build -t umutphp/php-docker-images-for-ci:5.6 - < ~/repo/images/5.6/Dockerfile

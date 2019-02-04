@@ -84,5 +84,5 @@ RUN mkdir -p /tools/kubawerlos/composer-json-fixer && \
     cd -
 
 # Add update script
-ADD ../../scripts/update.sh /update.sh
+ADD ./scripts/update.sh /update.sh
 RUN chmod +x /update.sh
