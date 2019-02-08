@@ -88,6 +88,12 @@ RUN mkdir -p /tools/kubawerlos/composer-json-fixer && \
     composer require kubawerlos/composer-json-fixer && \
     cd -
 
+# Install PHP Assumptions
+RUN mkdir -p /tools/rskuipers/php-assumptions && \
+    cd /tools/rskuipers/php-assumptions && \
+    composer require --dev rskuipers/php-assumptions && \
+    cd -
+
 # Add update script
 ADD https://raw.githubusercontent.com/umutphp/php-docker-images-for-ci/master/scripts/update.sh /update.sh
 RUN chmod +x /update.sh
