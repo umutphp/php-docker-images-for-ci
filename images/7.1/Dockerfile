@@ -89,6 +89,12 @@ RUN mkdir -p /tools/rskuipers/php-assumptions && \
     composer require --dev rskuipers/php-assumptions && \
     cd -
 
+# Install churn-php
+RUN mkdir -p /tools/bmitch/churn-php && \
+    cd /tools/bmitch/churn-php && \
+    composer require --dev bmitch/churn-php && \
+    cd -
+
 # Add update script
 ADD https://raw.githubusercontent.com/umutphp/php-docker-images-for-ci/master/scripts/update.sh /update.sh
 RUN chmod +x /update.sh
