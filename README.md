@@ -25,7 +25,7 @@ The tools that are installed by Composer are isolated by using different folder 
 - [PHP Magic Number Detector (PHPMND)](https://github.com/povils/phpmnd)
 - [composer.json fixer](https://github.com/kubawerlos/composer-json-fixer)
 - [PHP Assumptions](https://github.com/rskuipers/php-assumptions)
-- [churn-php](https://github.com/bmitch/churn-php)
+- [churn-php](https://github.com/bmitch/churn-php) (>=PHP 7.1)
 
 ## How to use ##
 1. **Directly From Docker Hub:** You use the images already built from [umutphp/php-docker-images-for-ci](https://hub.docker.com/r/umutphp/php-docker-images-for-ci).
