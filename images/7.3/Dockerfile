@@ -100,6 +100,12 @@ RUN mkdir -p /tools/bmitch/churn-php && \
     composer require --dev bmitch/churn-php && \
     cd -
 
+# Install Fink
+RUN mkdir -p /tools/dantleech/fink && \
+    cd /tools/dantleech/fink && \
+    composer require --dev dantleech/fink && \
+    cd -
+
 # Add update script
 ADD https://raw.githubusercontent.com/umutphp/php-docker-images-for-ci/master/scripts/update.sh /update.sh
 RUN chmod +x /update.sh
