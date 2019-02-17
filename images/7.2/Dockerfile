@@ -112,5 +112,6 @@ RUN mkdir -p /tools/dantleech/fink && \
 # Add update script
 ADD https://raw.githubusercontent.com/umutphp/php-docker-images-for-ci/master/scripts/update.sh /update.sh
 RUN chmod +x /update.sh
+
 # Unset COMPOSER_BIN_DIR
-RUN unset COMPOSER_BIN_DIR
+ENV COMPOSER_BIN_DIR=""
