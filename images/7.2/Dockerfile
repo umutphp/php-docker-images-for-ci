@@ -115,3 +115,6 @@ RUN chmod +x /update.sh
 
 # Unset COMPOSER_BIN_DIR
 ENV COMPOSER_BIN_DIR=""
+
+# Unset the entry point
+ENTRYPOINT []
