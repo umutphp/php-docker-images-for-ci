@@ -113,6 +113,10 @@ RUN mkdir -p /tools/dantleech/fink && \
 ADD https://raw.githubusercontent.com/umutphp/php-docker-images-for-ci/master/scripts/update.sh /update.sh
 RUN chmod +x /update.sh
 
+# Add gitignore check script
+ADD https://raw.githubusercontent.com/umutphp/php-docker-images-for-ci/master/scripts/gitignore_checker.sh /gitignore_checker.sh
+RUN chmod +x /gitignore_checker.sh && ln -s /gitignore_checker.sh /usr/local/bin/gitignore_checker
+
 # Unset COMPOSER_BIN_DIR
 ENV COMPOSER_BIN_DIR=""
 
