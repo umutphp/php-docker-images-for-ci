@@ -28,6 +28,9 @@ The tools that are installed by Composer are isolated by using different folder 
 - [churn-php](https://github.com/bmitch/churn-php) (>=PHP 7.1)
 - [Fink](https://github.com/dantleech/fink) (>=PHP 7.1)
 
+## Custom Tools ##
+- **Gitignore Checker:** `gitignore_checker` checks the .gitignore file under the directory that the command executed and finds if there are file or files both in the git ignore file and the repository.
+
 ## How to use ##
 1. **Directly From Docker Hub:** You use the images already built from [umutphp/php-docker-images-for-ci](https://hub.docker.com/r/umutphp/php-docker-images-for-ci).
 2. **Build Your Own:** Copy any of the Dockerfile files and build your own image.
