@@ -17,6 +17,7 @@ do
         find . -name "$file"
         echo -e "${RED}-----------------------------------------------------------"
         echo -e "${NC}"
+        EXITCODE='1'
     fi
 done
 
