@@ -30,6 +30,7 @@ The tools that are installed by Composer are isolated by using different folder 
 
 ## Custom Tools ##
 - **Gitignore Checker:** `gitignore_checker` checks the .gitignore file under the directory that the command executed and finds if there are file or files both in the git ignore file and the repository.
+- **Git Merge Conflict Marker Checker:** `merge_conflict_checer` checks all the files in the given folder (current folder is checked if not given) to find the forgotten merge conflict markers like "<<<<<<< HEAD". 
 
 ## How to use ##
 1. **Directly From Docker Hub:** You use the images already built from [umutphp/php-docker-images-for-ci](https://hub.docker.com/r/umutphp/php-docker-images-for-ci).
