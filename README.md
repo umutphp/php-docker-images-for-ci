@@ -123,11 +123,7 @@ docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 testabi
 - **Gitignore Checker:** `gitignore_checker` checks the .gitignore file under the directory that the command executed and finds if there are file or files both in the git ignore file and the repository.
 - **Git Merge Conflict Marker Checker:** `merge_conflict_checker` checks all the files in the given folder (current folder is checked if not given) to find the forgotten merge conflict markers like "<<<<<<< HEAD". 
 
-## 4. How to use ##
-1. **Directly From Docker Hub:** You use the images already built from [umutphp/php-docker-images-for-ci](https://hub.docker.com/r/umutphp/php-docker-images-for-ci).
-2. **Build Your Own:** Copy any of the Dockerfile files and build your own image.
-
-## 5. How to use images locally ##
+## 4. How to use images locally ##
 * A sample execution for [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer);
 
 ```
@@ -146,7 +142,7 @@ docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 securit
 docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 /root/.composer/vendor/bin/psecio-parse scan /app
 ```
 
-## How to Use in Gitlab CI ##
+## 5. How to Use in Gitlab CI ##
 You need to enable Docker executors on Gitlab CI. You can find sample job definitions for executing the tools on Gitlab CI pipeline for your repo. 
 
 * A sample job definition for [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer);
