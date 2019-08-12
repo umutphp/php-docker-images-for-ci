@@ -27,6 +27,7 @@ The tools that are installed by Composer are isolated by using different folder 
 - [PHP Assumptions](https://github.com/rskuipers/php-assumptions)
 - [churn-php](https://github.com/bmitch/churn-php) (>=PHP 7.1)
 - [Fink](https://github.com/dantleech/fink) (>=PHP 7.1)
+- [PHPMD](https://github.com/phpmd/phpmd)
 
 ## Custom Tools ##
 - **Gitignore Checker:** `gitignore_checker` checks the .gitignore file under the directory that the command executed and finds if there are file or files both in the git ignore file and the repository.
