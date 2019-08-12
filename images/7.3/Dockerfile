@@ -124,6 +124,12 @@ RUN mkdir -p /tools/phpmd/phpmd && \
     composer require --dev phpmd/phpmd && \
     cd -
 
+# Install PHP_Testability
+RUN mkdir -p /tools/edsonmedina/php_testability && \
+    cd /tools/edsonmedina/php_testability && \
+    composer require --dev edsonmedina/php_testability && \
+    cd -
+
 # Unset COMPOSER_BIN_DIR
 RUN unset COMPOSER_BIN_DIR
 

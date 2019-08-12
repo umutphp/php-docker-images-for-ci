@@ -25,9 +25,10 @@ The tools that are installed by Composer are isolated by using different folder 
 - [PHP Magic Number Detector (PHPMND)](https://github.com/povils/phpmnd)
 - [composer.json fixer](https://github.com/kubawerlos/composer-json-fixer)
 - [PHP Assumptions](https://github.com/rskuipers/php-assumptions)
-- [churn-php](https://github.com/bmitch/churn-php) (>=PHP 7.1)
-- [Fink](https://github.com/dantleech/fink) (>=PHP 7.1)
+- [churn-php](https://github.com/bmitch/churn-php) (Requires atleast PHP 7.1)
+- [Fink](https://github.com/dantleech/fink) (Requires atleast PHP 7.1)
 - [PHPMD](https://github.com/phpmd/phpmd)
+- [PHP_Testability](https://github.com/edsonmedina/php_testability) (Requires atleast PHP 7.0)
 
 ## Custom Tools ##
 - **Gitignore Checker:** `gitignore_checker` checks the .gitignore file under the directory that the command executed and finds if there are file or files both in the git ignore file and the repository.
