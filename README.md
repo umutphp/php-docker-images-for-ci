@@ -119,6 +119,13 @@ docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 phpmd /
 docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 testability /app -o report
 ```
 
+#### composer-normalize ####
+[composer-normalize](https://github.com/localheinz/composer-normalize) Provides a composer plugin for normalizing `composer.json`. It requires atleast PHP 7.1.
+
+```
+docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 cd /app && composer normalize
+```
+
 ## 3. Custom Tools ##
 - **Gitignore Checker:** `gitignore_checker` checks the .gitignore file under the directory that the command executed and finds if there are file or files both in the git ignore file and the repository.
 - **Git Merge Conflict Marker Checker:** `merge_conflict_checker` checks all the files in the given folder (current folder is checked if not given) to find the forgotten merge conflict markers like "<<<<<<< HEAD". 
