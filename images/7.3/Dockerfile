@@ -134,7 +134,7 @@ RUN mkdir -p /tools/edsonmedina/php_testability && \
 RUN composer global require localheinz/composer-normalize
 
 # Unset COMPOSER_BIN_DIR
-RUN unset COMPOSER_BIN_DIR
+ENV COMPOSER_BIN_DIR=""
 
 # Unset the entry point
 ENTRYPOINT []
