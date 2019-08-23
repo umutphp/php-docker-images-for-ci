@@ -133,6 +133,9 @@ RUN mkdir -p /tools/edsonmedina/php_testability && \
     composer require --dev edsonmedina/php_testability:dev-master && \
     cd -
 
+# Install composer-normalize
+RUN composer global require localheinz/composer-normalize
+
 # Unset COMPOSER_BIN_DIR
 ENV COMPOSER_BIN_DIR=""
 
