@@ -2,7 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/umutphp/php-docker-images-for-ci/tree/master.svg?style=svg)](https://circleci.com/gh/umutphp/php-docker-images-for-ci/tree/master)
 
-A repository  of Docker files to create images from official PHP images (latest version per master master branches) with some CI tools installed. 
+A repository  of Docker files to create images from official PHP images (latest version per master branch) with some CI tools installed. 
 
 The tools that are installed by Composer are isolated by using different folder per tool and linked to `/usr/local/bin` folder.
 
