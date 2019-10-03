@@ -126,6 +126,13 @@ docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 testabi
 docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 cd /app && composer normalize
 ```
 
+#### infection ####
+[Infection](https://infection.github.io/) is a PHP mutation testing framework based on AST (Abstract Syntax Tree) mutations. It works as a CLI tool and can be executed from your project’s root. It requires atleast PHP 7.1.
+
+```
+docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 infection
+```
+
 ## 3. Custom Tools ##
 - **Gitignore Checker:** `gitignore_checker` checks the .gitignore file under the directory that the command executed and finds if there are file or files both in the git ignore file and the repository.
 - **Git Merge Conflict Marker Checker:** `merge_conflict_checker` checks all the files in the given folder (current folder is checked if not given) to find the forgotten merge conflict markers like "<<<<<<< HEAD". 

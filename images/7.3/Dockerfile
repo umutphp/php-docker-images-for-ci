@@ -133,6 +133,13 @@ RUN mkdir -p /tools/edsonmedina/php_testability && \
 # Install composer-normalize
 RUN composer global require localheinz/composer-normalize
 
+# Install infection/infection for mutation testing 
+RUN apt-get update && \
+    apt-get -y --no-install-recommends install  php7.1-phpdbg && \
+    apt-get clean && \ 
+    rm -rf /var/lib/apt/lists/*
+RUN composer require infection/infection
+
 # Unset COMPOSER_BIN_DIR
 ENV COMPOSER_BIN_DIR=""
 
