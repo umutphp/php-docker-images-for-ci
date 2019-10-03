@@ -4,7 +4,7 @@
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
+**Table of Contents**
 
 - [Introduction](#introduction)
 - [List of PHP Images](#list-of-php-images)
@@ -223,4 +223,4 @@ security_psecio_parse:
         - psecio-parse scan /path/to/your/codebase/
 ```
 ## How To Contribute ##
-Please read the instructions in CONTRIBUTE.md file.
+Please read the instructions in [CONTRIBUTE.md](CONTRIBUTE.md) file.
