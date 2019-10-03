@@ -223,4 +223,4 @@ security_psecio_parse:
         - psecio-parse scan /path/to/your/codebase/
 ```
 ## How To Contribute ##
-Please read the instructions in [CONTRIBUTE.md](CONTRIBUTE.md) file.
+Please read the instructions in [CONTRIBUTING.md](CONTRIBUTING.md) file.

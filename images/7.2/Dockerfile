@@ -137,10 +137,7 @@ RUN mkdir -p /tools/edsonmedina/php_testability && \
 RUN composer global require localheinz/composer-normalize
 
 # Install infection/infection for mutation testing 
-RUN apt-get update && \
-    apt-get -y --no-install-recommends install  php7.1-phpdbg && \
-    apt-get clean && \ 
-    rm -rf /var/lib/apt/lists/*
+RUN pecl install xdebug-2.5.5 && docker-php-ext-enable xdebug
 RUN composer require infection/infection
 
 # Unset COMPOSER_BIN_DIR
