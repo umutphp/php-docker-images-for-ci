@@ -2,18 +2,51 @@
 
 [![CircleCI](https://circleci.com/gh/umutphp/php-docker-images-for-ci/tree/master.svg?style=svg)](https://circleci.com/gh/umutphp/php-docker-images-for-ci/tree/master)
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [Introduction](#introduction)
+- [List of PHP Images](#list-of-php-images)
+- [List of CI Tools](#list-of-ci-tools)
+    - [PHP Code Sniffer](#php-code-sniffer)
+    - [PHP Copy/Paste Detector (PHPCPD)](#php-copypaste-detector-phpcpd)
+    - [PHP Dead Code Detector](#php-dead-code-detector)
+    - [SensioLabs Security Checker](#sensiolabs-security-checker)
+    - [PhpMetrics](#phpmetrics)
+    - [Psecio Parse](#psecio-parse)
+    - [PHP VarDump Check](#php-vardump-check)
+    - [PHP Parallel Lint](#php-parallel-lint)
+    - [PHP Magic Number Detector (PHPMND)](#php-magic-number-detector-phpmnd)
+    - [composer.json Fixer](#composerjson-fixer)
+    - [PHP Assumptions](#php-assumptions)
+    - [churn-php](#churn-php)
+    - [Fink](#fink)
+    - [PHPMD](#phpmd)
+    - [PHP_Testability](#php_testability)
+    - [composer-normalize](#composer-normalize)
+    - [infection](#infection)
+- [Custom Tools](#custom-tools)
+- [How to use images locally](#how-to-use-images-locally)
+- [How to Use in Gitlab CI](#how-to-use-in-gitlab-ci)
+- [How To Contribute](#how-to-contribute)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Introduction ##
+
 A repository  of Docker files to create images from official PHP images (latest version per master branch) with some CI tools installed. 
 
 The tools that are installed by Composer are isolated by using different folder per tool and linked to `/usr/local/bin` folder.
 
-## 1. List of PHP Images ##
+## List of PHP Images ##
 - php:5.6
 - php:7.0
 - php:7.1
 - php:7.2
 - php:7.3
 
-## 2. List of CI Tools ##
+## List of CI Tools ##
 
 #### PHP Code Sniffer ####
 [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards. PHP_CodeSniffer comes with two PHP scripts; the main `phpcs` script that tokenizes PHP, JavaScript and CSS files to detect violations of a defined coding standard, and a second `phpcbf` script to automatically correct coding standard violations.
@@ -133,11 +166,11 @@ docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 cd /app
 docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 infection
 ```
 
-## 3. Custom Tools ##
+## Custom Tools ##
 - **Gitignore Checker:** `gitignore_checker` checks the .gitignore file under the directory that the command executed and finds if there are file or files both in the git ignore file and the repository.
 - **Git Merge Conflict Marker Checker:** `merge_conflict_checker` checks all the files in the given folder (current folder is checked if not given) to find the forgotten merge conflict markers like "<<<<<<< HEAD". 
 
-## 4. How to use images locally ##
+## How to use images locally ##
 * A sample execution for [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer);
 
 ```
@@ -156,7 +189,7 @@ docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 securit
 docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 /root/.composer/vendor/bin/psecio-parse scan /app
 ```
 
-## 5. How to Use in Gitlab CI ##
+## How to Use in Gitlab CI ##
 You need to enable Docker executors on Gitlab CI. You can find sample job definitions for executing the tools on Gitlab CI pipeline for your repo. 
 
 A sample job definition for [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer);
@@ -189,3 +222,5 @@ security_psecio_parse:
     script:
         - psecio-parse scan /path/to/your/codebase/
 ```
+## How To Contribute ##
+Please read the instructions in CONTRIBUTE.md file.
