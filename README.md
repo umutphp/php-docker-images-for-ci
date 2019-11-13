@@ -1,6 +1,6 @@
 # php-docker-images-for-ci
 
-[![CircleCI](https://circleci.com/gh/umutphp/php-docker-images-for-ci/tree/master.svg?style=svg)](https://circleci.com/gh/umutphp/php-docker-images-for-ci/tree/master) [![WOSPM](https://img.shields.io/badge/WOSPM-Welcoming-green)](https://github.com/WOSPM/checker)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](CONTRIBUTING.md) [![WOSPM](https://img.shields.io/badge/WOSPM-Welcoming-green)](https://github.com/WOSPM/checker) [![CircleCI](https://circleci.com/gh/umutphp/php-docker-images-for-ci/tree/master.svg?style=svg)](https://circleci.com/gh/umutphp/php-docker-images-for-ci/tree/master)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -30,7 +30,7 @@
 - [How to use images locally](#how-to-use-images-locally)
 - [How to Use in Gitlab CI](#how-to-use-in-gitlab-ci)
 - [How To Contribute](#how-to-contribute)
-
+- [Code of Conduct](#code-of-conduct)
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Introduction ##
@@ -224,3 +224,6 @@ security_psecio_parse:
 ```
 ## How To Contribute ##
 Please read the instructions in [CONTRIBUTING.md](CONTRIBUTING.md) file.
+
+## Code of Conduct ##
+See [CODE_OF_CONDUCT](CODE_OF_CONDUCT) for information.
