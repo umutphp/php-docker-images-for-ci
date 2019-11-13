@@ -28,6 +28,14 @@ jobs:
       - run:
           name: DockerLint-7-3
           command: dockerlint ~/repo/images/7.3/Dockerfile
+  wospm-checker:
+    docker:
+      - image: wospm/checker
+    steps:
+      - checkout
+      - run:
+          name: WOSPM
+          command: wospm-checker --verbose 1
   create_images:
     machine: true
     working_directory: ~/repo
@@ -82,4 +90,5 @@ workflows:
   build_and_create:
     jobs:
       - build
+      - wospm-checker
       - create_images
