@@ -29,6 +29,7 @@
 - [Custom Tools](#custom-tools)
 - [How to use images locally](#how-to-use-images-locally)
 - [How to Use in Gitlab CI](#how-to-use-in-gitlab-ci)
+- [How to Use in CircleCI](#how-to-use-in-circleci)
 - [How To Contribute](#how-to-contribute)
 - [Code of Conduct](#code-of-conduct)
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -222,6 +223,44 @@ security_psecio_parse:
     script:
         - psecio-parse scan /path/to/your/codebase/
 ```
+
+## How to Use in CircleCI ##
+You can make some static code checks before bulding and testing your application on CircleCI.
+
+```
+# PHP CircleCI 2.0 configuration file
+#
+version: 2
+jobs:
+  checks:
+    docker:
+      - image: umutphp/php-docker-images-for-ci:7.2
+    steps:
+      - checkout
+      - run: 
+          name: Composer-normalize
+          no_output_timeout: 20m
+          command: composer normalize --dry-run
+      - run: 
+          name: PHP-Lint
+          no_output_timeout: 20m
+          command: parallel-lint --exclude vendor .
+      - run: 
+          name: Var-Dump-Check
+          no_output_timeout: 20m
+          command: var-dump-check .
+      - run: 
+          name: Merge-Conflict-Checker
+          no_output_timeout: 20m
+          command: merge_conflict_checker .
+workflows:
+  version: 2
+  build:
+    jobs:
+      - checks
+```
+
+
 ## How To Contribute ##
 Please read the instructions in [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
