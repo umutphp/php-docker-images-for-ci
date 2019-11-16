@@ -1,5 +1,5 @@
 ---
-name: New Tool Request
+name: New tool request
 about: New Tool Request
 title: "[TOOL] - Tool Title"
 labels: new tool
