@@ -28,6 +28,9 @@ jobs:
       - run:
           name: DockerLint-7-3
           command: dockerlint ~/repo/images/7.3/Dockerfile
+      - run:
+          name: DockerLint-7-4
+          command: dockerlint ~/repo/images/7.4/Dockerfile
   wospm-checker:
     docker:
       - image: wospm/checker
@@ -84,6 +87,14 @@ jobs:
           name: Push-7-3
           no_output_timeout: 20m
           command: docker push umutphp/php-docker-images-for-ci:7.3
+      - run:
+          name: Build-7-4
+          no_output_timeout: 20m
+          command: docker build -t umutphp/php-docker-images-for-ci:7.4 - < ~/repo/images/7.4/Dockerfile
+      - run:
+          name: Push-7-4
+          no_output_timeout: 20m
+          command: docker push umutphp/php-docker-images-for-ci:7.4
 
 workflows:
   version: 2
