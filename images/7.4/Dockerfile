@@ -4,7 +4,7 @@ FROM php:7.4.0
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && \
-    apt-get -y install --no-install-recommends libmcrypt-dev libreadline-dev zlib1g-dev libxml2-dev libzip-dev apt-utils curl git zip unzip && \
+    apt-get -y install --no-install-recommends libmcrypt-dev libreadline-dev zlib1g-dev libxml2-dev libzip-dev apt-utils curl git zip unzip libonig-dev && \
     rm -rf /var/lib/apt/lists/*
 
 RUN docker-php-ext-install \
