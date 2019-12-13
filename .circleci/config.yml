@@ -43,6 +43,7 @@ jobs:
     working_directory: ~/repo
     docker:
       - image: dslim/docker-slim
+        entrypoint: ls
     steps:
       - checkout
       - run:
