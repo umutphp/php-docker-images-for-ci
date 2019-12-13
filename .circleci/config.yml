@@ -40,7 +40,6 @@ jobs:
           name: WOSPM
           command: wospm-checker --verbose 1
   create_images:
-    machine: true
     working_directory: ~/repo
     docker:
       - image: dslim/docker-slim
