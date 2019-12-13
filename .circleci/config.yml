@@ -42,6 +42,8 @@ jobs:
   create_images:
     machine: true
     working_directory: ~/repo
+    docker:
+      - image: dslim/docker-slim
     steps:
       - checkout
       - run:
@@ -50,7 +52,7 @@ jobs:
       - run:
           name: Build-5-6
           no_output_timeout: 20m
-          command: docker build -t umutphp/php-docker-images-for-ci:5.6 - < ~/repo/images/5.6/Dockerfile
+          command: docker-slim build -t umutphp/php-docker-images-for-ci:5.6 - < ~/repo/images/5.6/Dockerfile
       - run:
           name: Push-5-6
           no_output_timeout: 20m
