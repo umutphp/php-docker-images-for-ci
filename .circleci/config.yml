@@ -42,8 +42,7 @@ jobs:
   create_images:
     working_directory: ~/repo
     docker:
-      - image: dslim/docker-slim
-        command: ls
+      - image: umutphp/docker-slim-for-ci
     steps:
       - checkout
       - run:
