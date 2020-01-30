@@ -145,10 +145,6 @@ RUN mkdir -p /tools/deptrac && \
     curl -LS https://github.com/sensiolabs-de/deptrac/releases/download/0.6.0/deptrac.phar -o deptrac.phar && \
     chmod +x deptrac.phar && mv deptrac.phar /tools/deptrac/deptrac
 
-# optional
-sudo chmod +x deptrac.phar
-sudo mv deptrac.phar /usr/local/bin/deptrac
-
 # Unset COMPOSER_BIN_DIR
 ENV COMPOSER_BIN_DIR=""
 
