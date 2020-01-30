@@ -26,12 +26,14 @@
     - [PHP_Testability](#php_testability)
     - [composer-normalize](#composer-normalize)
     - [infection](#infection)
+    - [Deptrac](#deptrac)
 - [Custom Tools](#custom-tools)
 - [How to use images locally](#how-to-use-images-locally)
 - [How to Use in Gitlab CI](#how-to-use-in-gitlab-ci)
 - [How to Use in CircleCI](#how-to-use-in-circleci)
 - [How To Contribute](#how-to-contribute)
 - [Code of Conduct](#code-of-conduct)
+
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Introduction ##
@@ -162,6 +164,9 @@ docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 cd /app
 
 #### infection ####
 [Infection](https://infection.github.io/) is a PHP mutation testing framework based on AST (Abstract Syntax Tree) mutations. It works as a CLI tool and can be executed from your project’s root. It requires atleast PHP 7.1.
+
+#### Deptrac ####
+[Deptrac](https://github.com/sensiolabs-de/deptrac) is a static code analysis tool that helps to enforce rules for dependencies between software layers in your PHP projects. It requires atleast PHP 7.1.
 
 ```
 docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 infection
