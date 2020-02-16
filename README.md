@@ -1,6 +1,6 @@
 # php-docker-images-for-ci
 
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](CONTRIBUTING.md) [![WOSPM Badge](https://app.wospm.info/badge/A42eGp0GOw)](https://app.wospm.info/project/A42eGp0GOw) [![CircleCI](https://circleci.com/gh/umutphp/php-docker-images-for-ci/tree/master.svg?style=svg)](https://circleci.com/gh/umutphp/php-docker-images-for-ci/tree/master)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](CONTRIBUTING.md) ![WOSPM Checker](https://github.com/umutphp/php-docker-images-for-ci/workflows/WOSPM%20Checker/badge.svg) [![CircleCI](https://circleci.com/gh/umutphp/php-docker-images-for-ci/tree/master.svg?style=svg)](https://circleci.com/gh/umutphp/php-docker-images-for-ci/tree/master)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
