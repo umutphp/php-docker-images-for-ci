@@ -165,11 +165,18 @@ docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 cd /app
 #### infection ####
 [Infection](https://infection.github.io/) is a PHP mutation testing framework based on AST (Abstract Syntax Tree) mutations. It works as a CLI tool and can be executed from your project’s root. It requires atleast PHP 7.1.
 
+```
+docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 infection
+```
+
 #### Deptrac ####
 [Deptrac](https://github.com/sensiolabs-de/deptrac) is a static code analysis tool that helps to enforce rules for dependencies between software layers in your PHP projects. It requires atleast PHP 7.1.
 
+#### PHP Insights ####
+[PHP Insights](https://phpinsights.com/) was carefully crafted to simplify the analysis of your code directly from your terminal. It requires atleast PHP 7.2.
+
 ```
-docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 infection
+docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.3 phpinsights
 ```
 
 ## Custom Tools ##
