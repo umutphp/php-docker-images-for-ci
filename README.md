@@ -93,7 +93,7 @@ docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 phpmetr
 docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 psecio-parse scan /app
 ```
 #### PHP VarDump Check ####
-[PHP VarDump Check](https://github.com/JakubOnderka/PHP-Var-Dump-Check) is a PHP console application for finding forgotten variable dump lines. It supports PHP build in method print_r, var_dump and var_export methods and also methods from Tracy debugger, Ladybug, Symfony, Laravel, Doctrine and Zend Framework.
+[PHP VarDump Check](https://github.com/php-parallel-lint/PHP-Var-Dump-Check) is a PHP console application for finding forgotten variable dump lines. It supports PHP build in method print_r, var_dump and var_export methods and also methods from Tracy debugger, Ladybug, Symfony, Laravel, Doctrine and Zend Framework.
 
 ```
 docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 var-dump-check /app

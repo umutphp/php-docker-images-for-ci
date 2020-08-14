@@ -65,9 +65,9 @@ RUN mkdir -p /tools/psecio/parse && \
     cd -
 
 # Install PHP-Var-Dump-Check
-RUN mkdir -p /tools/jakub-onderka/php-var-dump-check && \
-    cd /tools/jakub-onderka/php-var-dump-check && \
-    composer require --dev jakub-onderka/php-var-dump-check && \
+RUN mkdir -p /tools/php-parallel-lint/php-var-dump-check && \
+    cd /tools/php-parallel-lint/php-var-dump-check && \
+    composer require --dev php-parallel-lint/php-var-dump-check && \
     cd -
 
 # Install PHP-Parallel-Lint
