@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## declare an array variable
-declare -a array=("5.6" "7.0" "7.1" "7.2" "7.3" "7.4")
+declare -a array=("5.6" "7.0" "7.1" "7.2" "7.3" "7.4" "8.0")
 
 # get length of an array
 arraylength=${#array[@]}
