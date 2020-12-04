@@ -43,7 +43,6 @@ A repository  of Docker files to create images from official PHP images (latest 
 The tools that are installed by Composer are isolated by using different folder per tool and linked to `/usr/local/bin` folder.
 
 ## List of PHP Images ##
-- php:5.6
 - php:7.0
 - php:7.1
 - php:7.2
