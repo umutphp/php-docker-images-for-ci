@@ -53,12 +53,6 @@ RUN mkdir -p /tools
 # Set global bin-dir for composer packages
 ENV COMPOSER_BIN_DIR="/usr/local/bin"
 
-# Install Psecio Parse
-RUN mkdir -p /tools/psecio/parse && \
-    cd /tools/psecio/parse && \
-    composer require --dev psecio/parse && \
-    cd -
-
 # Install PHP-Var-Dump-Check
 RUN mkdir -p /tools/php-parallel-lint/php-var-dump-check && \
     cd /tools/php-parallel-lint/php-var-dump-check && \
