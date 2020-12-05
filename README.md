@@ -48,6 +48,7 @@ The tools that are installed by Composer are isolated by using different folder 
 - php:7.1
 - php:7.2
 - php:7.3
+- php:7.4
 - php:8.0
 
 ## List of CI Tools ##
@@ -88,7 +89,7 @@ docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 phpmetr
 ```
 
 #### Psecio Parse ####
-[Psecio Parse](https://github.com/psecio/parse) scanner is a static scanning tool to review your PHP code for potential security-related issues. 
+[Psecio Parse](https://github.com/psecio/parse) scanner is a static scanning tool to review your PHP code for potential security-related issues. . It requires atleast PHP 7.0.
 
 ```
 docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 psecio-parse scan /app
