@@ -109,7 +109,7 @@ docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 paralle
 ```
 
 #### PHP Magic Number Detector (PHPMND) ####
-[PHP Magic Number Detector (PHPMND)](https://github.com/povils/phpmnd) is a tool that aims to help you to detect [magic numbers](https://github.com/povils/phpmnd#what-is-a-magic-number) in your PHP code. By default 0 and 1 are not considered to be magic numbers.
+[PHP Magic Number Detector (PHPMND)](https://github.com/povils/phpmnd) is a tool that aims to help you to detect [magic numbers](https://github.com/povils/phpmnd#what-is-a-magic-number) in your PHP code. By default 0 and 1 are not considered to be magic numbers. This tool is incompatible with PHP 8.0.
 
 ```
 docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 phpmnd /app
