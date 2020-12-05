@@ -117,12 +117,6 @@ RUN chmod +x /gitignore_checker.sh && ln -s /gitignore_checker.sh /usr/local/bin
 ADD https://raw.githubusercontent.com/umutphp/php-docker-images-for-ci/master/scripts/merge_conflict_checker.sh /merge_conflict_checker.sh
 RUN chmod +x /merge_conflict_checker.sh && ln -s /merge_conflict_checker.sh /usr/local/bin/merge_conflict_checker
 
-# Install PHPMD
-RUN mkdir -p /tools/phpmd/phpmd && \
-    cd /tools/phpmd/phpmd && \
-    composer require --dev phpmd/phpmd && \
-    cd -
-
 # Install PHP_Testability
 RUN mkdir -p /tools/edsonmedina/php_testability && \
     cd /tools/edsonmedina/php_testability && \
