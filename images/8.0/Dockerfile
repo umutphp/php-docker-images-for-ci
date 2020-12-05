@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:images/8.0/Dockerfile
->>>>>>> 4eb49717eb7e47e3ff768f2768d28bc95f9c2e3b
 FROM php:8.0.0
 
 # disable interactive functions
