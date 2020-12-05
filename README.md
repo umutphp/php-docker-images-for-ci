@@ -48,6 +48,7 @@ The tools that are installed by Composer are isolated by using different folder 
 - php:7.1
 - php:7.2
 - php:7.3
+- php:8.0
 
 ## List of CI Tools ##
 

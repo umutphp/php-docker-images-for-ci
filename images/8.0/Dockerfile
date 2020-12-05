@@ -1,15 +1,14 @@
-FROM php:7.1.33
+FROM php:8.0.0
 
 # disable interactive functions
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && \
-    apt-get -y --no-install-recommends install libmcrypt-dev libreadline-dev zlib1g-dev libxml2-dev apt-utils curl git zip unzip && \
+    apt-get -y install --no-install-recommends libmcrypt-dev libreadline-dev zlib1g-dev libxml2-dev libzip-dev apt-utils curl git zip unzip libonig-dev && \
     rm -rf /var/lib/apt/lists/*
 
 RUN docker-php-ext-install \
     mbstring \
-    mcrypt \
     zip \
     pdo_mysql \
     mysqli \
@@ -40,11 +39,17 @@ RUN curl -L http://get.sensiolabs.org/security-checker.phar -o security-checker.
 
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer -o composer-setup.php && \
-    php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+    php composer-setup.php --install-dir=/usr/local/bin --filename=composer && \
+    composer config -g repo.packagist composer https://packagist.phpcomposer.com
 
 # Install PhpMetrics
 RUN curl -OL https://github.com/phpmetrics/PhpMetrics/releases/download/v2.3.2/phpmetrics.phar && \
     chmod +x phpmetrics.phar && mv phpmetrics.phar /usr/local/bin/phpmetrics
+
+# Install phpcs-security-audit v2 sniffes
+RUN mkdir -p /opt/phpcs/snifss/ && \
+    cd /opt/phpcs/snifss/ && \
+    git clone -b master https://github.com/FloeDesignTechnologies/phpcs-security-audit.git phpcs-security-audit
 
 # Create tools folder
 RUN mkdir -p /tools
@@ -128,13 +133,19 @@ RUN mkdir -p /tools/edsonmedina/php_testability && \
 RUN composer global require localheinz/composer-normalize
 
 # Install infection/infection for mutation testing
-RUN pecl install xdebug-2.5.5 && docker-php-ext-enable xdebug
+RUN pecl install xdebug-2.8.0beta2 && docker-php-ext-enable xdebug
 RUN composer require infection/infection
 
 # Install Deptrac
 RUN mkdir -p /tools/deptrac && \
     curl -LS https://github.com/sensiolabs-de/deptrac/releases/download/0.6.0/deptrac.phar -o deptrac.phar && \
     chmod +x deptrac.phar && mv deptrac.phar /tools/deptrac/deptrac
+
+# Install PHP Insights
+RUN mkdir -p /tools/nunomaduro/phpinsights && \
+    cd /tools/nunomaduro/phpinsights && \
+    composer global require nunomaduro/phpinsights && \
+    cd -
 
 # Unset COMPOSER_BIN_DIR
 ENV COMPOSER_BIN_DIR=""
