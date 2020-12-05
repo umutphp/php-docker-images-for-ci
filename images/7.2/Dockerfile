@@ -135,10 +135,6 @@ RUN mkdir -p /tools/edsonmedina/php_testability && \
 # Install composer-normalize
 RUN composer global require localheinz/composer-normalize
 
-# Install infection/infection for mutation testing
-RUN pecl install xdebug-2.6.0alpha1 && docker-php-ext-enable xdebug
-RUN composer require infection/infection
-
 # Install Deptrac
 RUN mkdir -p /tools/deptrac && \
     curl -LS https://github.com/sensiolabs-de/deptrac/releases/download/0.6.0/deptrac.phar -o deptrac.phar && \
