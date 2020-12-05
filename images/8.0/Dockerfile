@@ -75,12 +75,6 @@ RUN mkdir -p /tools/jakub-onderka/php-parallel-lint && \
     composer require --dev jakub-onderka/php-parallel-lint && \
     cd -
 
-# Install Magic Number Detecter
-RUN mkdir -p /tools/povils/phpmnd && \
-    cd /tools/povils/phpmnd && \
-    composer require povils/phpmnd && \
-    cd -
-
 # Install composer.json fixer
 RUN mkdir -p /tools/kubawerlos/composer-json-fixer && \
     cd /tools/kubawerlos/composer-json-fixer && \
@@ -116,6 +110,12 @@ RUN chmod +x /gitignore_checker.sh && ln -s /gitignore_checker.sh /usr/local/bin
 # Add merge conflict checker script
 ADD https://raw.githubusercontent.com/umutphp/php-docker-images-for-ci/master/scripts/merge_conflict_checker.sh /merge_conflict_checker.sh
 RUN chmod +x /merge_conflict_checker.sh && ln -s /merge_conflict_checker.sh /usr/local/bin/merge_conflict_checker
+
+# Install PHPMD
+RUN mkdir -p /tools/phpmd/phpmd && \
+    cd /tools/phpmd/phpmd && \
+    composer require --dev phpmd/phpmd && \
+    cd -
 
 # Install PHP_Testability
 RUN mkdir -p /tools/edsonmedina/php_testability && \
