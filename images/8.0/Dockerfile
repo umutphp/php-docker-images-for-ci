@@ -70,9 +70,9 @@ RUN mkdir -p /tools/php-parallel-lint/php-var-dump-check && \
     cd -
 
 # Install PHP-Parallel-Lint
-RUN mkdir -p /tools/jakub-onderka/php-parallel-lint && \
-    cd /tools/jakub-onderka/php-parallel-lint && \
-    composer require --dev jakub-onderka/php-parallel-lint && \
+RUN mkdir -p /tools/php-parallel-lint/php-parallel-lint && \
+    cd /tools/php-parallel-lint/php-parallel-lint && \
+    composer require --dev php-parallel-lint/php-parallel-lint && \
     cd -
 
 # Install composer.json fixer
@@ -134,6 +134,12 @@ RUN composer require infection/infection
 RUN mkdir -p /tools/deptrac && \
     curl -LS https://github.com/sensiolabs-de/deptrac/releases/download/0.6.0/deptrac.phar -o deptrac.phar && \
     chmod +x deptrac.phar && mv deptrac.phar /tools/deptrac/deptrac
+
+# Install PHP Insights
+RUN mkdir -p /tools/nunomaduro/phpinsights && \
+    cd /tools/nunomaduro/phpinsights && \
+    composer global require nunomaduro/phpinsights && \
+    cd -
 
 # Unset COMPOSER_BIN_DIR
 ENV COMPOSER_BIN_DIR=""

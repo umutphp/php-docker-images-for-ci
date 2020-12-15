@@ -70,9 +70,9 @@ RUN mkdir -p /tools/php-parallel-lint/php-var-dump-check && \
     cd -
 
 # Install PHP-Parallel-Lint
-RUN mkdir -p /tools/jakub-onderka/php-parallel-lint && \
-    cd /tools/jakub-onderka/php-parallel-lint && \
-    composer require --dev jakub-onderka/php-parallel-lint && \
+RUN mkdir -p /tools/php-parallel-lint/php-parallel-lint && \
+    cd /tools/php-parallel-lint/php-parallel-lint && \
+    composer require --dev php-parallel-lint/php-parallel-lint && \
     cd -
 
 # Install Magic Number Detecter

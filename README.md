@@ -102,7 +102,7 @@ docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 var-dum
 ```
 
 #### PHP Parallel Lint ####
-[PHP Parallel Lint](https://github.com/JakubOnderka/PHP-Parallel-Lint) checks syntax of PHP files faster than serial check with a fancier output. Running parallel jobs in PHP is inspired by Nette framework tests.
+[PHP Parallel Lint](https://github.com/php-parallel-lint/PHP-Parallel-Lint) checks syntax of PHP files faster than serial check with a fancier output. Running parallel jobs in PHP is inspired by Nette framework tests.
 
 ```
 docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 parallel-lint /app
