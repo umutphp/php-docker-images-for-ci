@@ -175,7 +175,7 @@ docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 infecti
 [Deptrac](https://github.com/sensiolabs-de/deptrac) is a static code analysis tool that helps to enforce rules for dependencies between software layers in your PHP projects. It requires atleast PHP 7.1.
 
 #### PHP Insights ####
-[PHP Insights](https://phpinsights.com/) was carefully crafted to simplify the analysis of your code directly from your terminal. It requires atleast PHP 7.2.
+[PHP Insights](https://phpinsights.com/) was carefully crafted to simplify the analysis of your code directly from your terminal. It requires atleast PHP 7.2 and It is not supporting PHP 8.0 for now. 
 
 ```
 docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.3 phpinsights
