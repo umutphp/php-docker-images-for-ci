@@ -34,6 +34,27 @@ jobs:
       - run:
           name: DockerLint-8.0
           command: dockerlint ~/repo/images/8.0/Dockerfile
+      - run:
+          name: DockerLint-5-6-alpine
+          command: dockerlint ~/repo/images/5.6/Dockerfile-alpine
+      - run:
+          name: DockerLint-7-0-alpine
+          command: dockerlint ~/repo/images/7.0/Dockerfile-alpine
+      - run:
+          name: DockerLint-7-1-alpine
+          command: dockerlint ~/repo/images/7.1/Dockerfile-alpine
+      - run:
+          name: DockerLint-7-2-alpine
+          command: dockerlint ~/repo/images/7.2/Dockerfile-alpine
+      - run:
+          name: DockerLint-7-3-alpine
+          command: dockerlint ~/repo/images/7.3/Dockerfile-alpine
+      - run:
+          name: DockerLint-7-4-alpine
+          command: dockerlint ~/repo/images/7.4/Dockerfile-alpine
+      - run:
+          name: DockerLint-8.0-alpine
+          command: dockerlint ~/repo/images/8.0/Dockerfile-alpine
   wospm-checker:
     docker:
       - image: wospm/checker
@@ -106,6 +127,62 @@ jobs:
           name: Push-8-0
           no_output_timeout: 20m
           command: docker push umutphp/php-docker-images-for-ci:8.0
+      - run:
+          name: Build-5-6-alpine
+          no_output_timeout: 20m
+          command: docker build -t umutphp/php-docker-images-for-ci:5.6-alpine - < ~/repo/images/5.6/Dockerfile-alpine
+      - run:
+          name: Push-5-6-alpine
+          no_output_timeout: 20m
+          command: docker push umutphp/php-docker-images-for-ci:5.6-alpine
+      - run:
+          name: Build-7-0-alpine
+          no_output_timeout: 20m
+          command: docker build -t umutphp/php-docker-images-for-ci:7.0-alpine - < ~/repo/images/7.0/Dockerfile-alpine
+      - run:
+          name: Push-7-0-alpine
+          no_output_timeout: 20m
+          command: docker push umutphp/php-docker-images-for-ci:7.0-alpine
+      - run:
+          name: Build-7-1-alpine
+          no_output_timeout: 20m
+          command: docker build -t umutphp/php-docker-images-for-ci:7.1-alpine - < ~/repo/images/7.1/Dockerfile-alpine
+      - run:
+          name: Push-7-1-alpine
+          no_output_timeout: 20m
+          command: docker push umutphp/php-docker-images-for-ci:7.1-alpine
+      - run:
+          name: Build-7-2-alpine
+          no_output_timeout: 20m
+          command: docker build -t umutphp/php-docker-images-for-ci:7.2-alpine - < ~/repo/images/7.2/Dockerfile-alpine
+      - run:
+          name: Push-7-2-alpine
+          no_output_timeout: 20m
+          command: docker push umutphp/php-docker-images-for-ci:7.2-alpine
+      - run:
+          name: Build-7-3-alpine
+          no_output_timeout: 20m
+          command: docker build -t umutphp/php-docker-images-for-ci:7.3-alpine - < ~/repo/images/7.3/Dockerfile-alpine
+      - run:
+          name: Push-7-3-alpine
+          no_output_timeout: 20m
+          command: docker push umutphp/php-docker-images-for-ci:7.3-alpine
+      - run:
+          name: Build-7-4-alpine
+          no_output_timeout: 20m
+          command: docker build -t umutphp/php-docker-images-for-ci:7.4-alpine - < ~/repo/images/7.4/Dockerfile-alpine
+      - run:
+          name: Push-7-4-alpine
+          no_output_timeout: 20m
+          command: docker push umutphp/php-docker-images-for-ci:7.4-alpine
+      - run:
+          name: Build-8-0-alpine
+          no_output_timeout: 20m
+          command: docker build -t umutphp/php-docker-images-for-ci:8.0-alpine - < ~/repo/images/8.0/Dockerfile-alpine
+      - run:
+          name: Push-8-0-alpine
+          no_output_timeout: 20m
+          command: docker push umutphp/php-docker-images-for-ci:8.0-alpine
 
 workflows:
   version: 2

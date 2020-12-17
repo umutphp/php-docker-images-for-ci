@@ -8,6 +8,7 @@
 
 - [Introduction](#introduction)
 - [List of PHP Images](#list-of-php-images)
+- [List of Alpine Based PHP Images](#list-of-alpine-based-php-images)
 - [List of CI Tools](#list-of-ci-tools)
     - [PHP Code Sniffer](#php-code-sniffer)
     - [PHP Copy/Paste Detector (PHPCPD)](#php-copypaste-detector-phpcpd)
@@ -50,6 +51,15 @@ The tools that are installed by Composer are isolated by using different folder 
 - php:7.3
 - php:7.4
 - php:8.0
+
+## List of Alpine Based PHP Images ##
+- php:5.6-alpine
+- php:7.0-alpine
+- php:7.1-alpine
+- php:7.2-alpine
+- php:7.3-alpine
+- php:7.4-alpine
+- php:8.0-alpine
 
 ## List of CI Tools ##
 
