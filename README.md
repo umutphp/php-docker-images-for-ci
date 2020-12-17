@@ -44,22 +44,22 @@ A repository  of Docker files to create images from official PHP images (latest 
 The tools that are installed by Composer are isolated by using different folder per tool and linked to `/usr/local/bin` folder.
 
 ## List of PHP Images ##
-- php:5.6
-- php:7.0
-- php:7.1
-- php:7.2
-- php:7.3
-- php:7.4
-- php:8.0
+- umutphp/php-docker-images-for-ci:5.6
+- umutphp/php-docker-images-for-ci:7.0
+- umutphp/php-docker-images-for-ci:7.1
+- umutphp/php-docker-images-for-ci:7.2
+- umutphp/php-docker-images-for-ci:7.3
+- umutphp/php-docker-images-for-ci:7.4
+- umutphp/php-docker-images-for-ci:8.0
 
 ## List of Alpine Based PHP Images ##
-- php:5.6-alpine
-- php:7.0-alpine
-- php:7.1-alpine
-- php:7.2-alpine
-- php:7.3-alpine
-- php:7.4-alpine
-- php:8.0-alpine
+- umutphp/php-docker-images-for-ci:5.6-alpine
+- umutphp/php-docker-images-for-ci:7.0-alpine
+- umutphp/php-docker-images-for-ci:7.1-alpine
+- umutphp/php-docker-images-for-ci:7.2-alpine
+- umutphp/php-docker-images-for-ci:7.3-alpine
+- umutphp/php-docker-images-for-ci:7.4-alpine
+- umutphp/php-docker-images-for-ci:8.0-alpine
 
 ## List of CI Tools ##
 
