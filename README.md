@@ -39,7 +39,7 @@
 
 ## Introduction ##
 
-A repository  of Docker files to create images from official PHP images (latest version per master branch) with some CI tools installed. 
+A repository of Docker files to create images from official PHP images (from latest tag per PHP version) with some CI tools installed. 
 
 The tools that are installed by Composer are isolated by using different folder per tool and linked to `/usr/local/bin` folder.
 
