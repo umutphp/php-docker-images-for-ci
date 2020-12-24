@@ -28,6 +28,7 @@
     - [composer-normalize](#composer-normalize)
     - [infection](#infection)
     - [Deptrac](#deptrac)
+    - [composer-unused](#composer-unused)
 - [Custom Tools](#custom-tools)
 - [How to use images locally](#how-to-use-images-locally)
 - [How to Use in Gitlab CI](#how-to-use-in-gitlab-ci)
@@ -182,6 +183,9 @@ docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 infecti
 
 #### Deptrac ####
 [Deptrac](https://github.com/sensiolabs-de/deptrac) is a static code analysis tool that helps to enforce rules for dependencies between software layers in your PHP projects. It requires atleast PHP 7.1.
+
+#### composer-unused ####
+[composer-unused](https://github.com/composer-unused/composer-unused) is a Composer tool to show unused Composer dependencies by scanning your code. It requires atleast PHP 7.3.
 
 #### PHP Insights ####
 [PHP Insights](https://phpinsights.com/) was carefully crafted to simplify the analysis of your code directly from your terminal. It requires atleast PHP 7.2 and It is not supporting PHP 8.0 for now. 
