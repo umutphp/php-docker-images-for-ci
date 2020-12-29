@@ -198,6 +198,13 @@ docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.3 compose
 docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.3 phpinsights
 ```
 
+#### PHPStan ####
+[PHPStan](https://github.com/phpstan/phpstan) focuses on finding errors in your code without actually running it. It catches whole classes of bugs even before you write tests for the code. It requires atleast PHP 7.1.
+
+```
+docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.3 phpstan analyse
+```
+
 ## Custom Tools ##
 - **Gitignore Checker:** `gitignore_checker` checks the .gitignore file under the directory that the command executed and finds if there are file or files both in the git ignore file and the repository.
 - **Git Merge Conflict Marker Checker:** `merge_conflict_checker` checks all the files in the given folder (current folder is checked if not given) to find the forgotten merge conflict markers like "<<<<<<< HEAD". 

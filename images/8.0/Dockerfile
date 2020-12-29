@@ -141,6 +141,12 @@ RUN mkdir -p /tools/icanhazstring/composer-unused && \
     composer require --dev icanhazstring/composer-unused && \
     cd -
 
+# Install phpstan
+RUN mkdir -p /tools/phpstan/phpstan && \
+    cd /tools/phpstan/phpstan && \
+    composer require --dev phpstan/phpstan && \
+    cd -
+
 # Unset COMPOSER_BIN_DIR
 ENV COMPOSER_BIN_DIR=""
 

@@ -132,6 +132,12 @@ RUN mkdir -p /tools/deptrac && \
     curl -LS https://github.com/sensiolabs-de/deptrac/releases/download/0.6.0/deptrac.phar -o deptrac.phar && \
     chmod +x deptrac.phar && mv deptrac.phar /tools/deptrac/deptrac
 
+# Install phpstan
+RUN mkdir -p /tools/phpstan/phpstan && \
+    cd /tools/phpstan/phpstan && \
+    composer require --dev phpstan/phpstan && \
+    cd -
+
 # Unset COMPOSER_BIN_DIR
 ENV COMPOSER_BIN_DIR=""
 

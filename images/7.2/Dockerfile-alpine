@@ -146,6 +146,12 @@ RUN mkdir -p /tools/nunomaduro/phpinsights && \
     composer global require nunomaduro/phpinsights && \
     cd -
 
+# Install phpstan
+RUN mkdir -p /tools/phpstan/phpstan && \
+    cd /tools/phpstan/phpstan && \
+    composer require --dev phpstan/phpstan && \
+    cd -
+
 # Unset COMPOSER_BIN_DIR
 ENV COMPOSER_BIN_DIR=""
 
