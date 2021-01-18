@@ -29,6 +29,9 @@
     - [infection](#infection)
     - [Deptrac](#deptrac)
     - [composer-unused](#composer-unused)
+    - [PHP Insights](#php-insights)
+    - [PHPStan](#phpstan)
+    - [Local PHP Security Checker](#local-php-security-checker)
 - [Custom Tools](#custom-tools)
 - [How to use images locally](#how-to-use-images-locally)
 - [How to Use in Gitlab CI](#how-to-use-in-gitlab-ci)
@@ -85,6 +88,8 @@ docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 phpdcd 
 ```
 
 #### SensioLabs Security Checker ####
+**Warning** The tool is deprecated and you can use [Local PHP Security Checker](#local-php-security-checker) instead.
+
 The [SensioLabs Security Checker](https://github.com/sensiolabs/security-checker) is a command line tool that checks if your application uses dependencies with known security vulnerabilities. It uses the [Security Check Web service](https://security.symfony.com/) and the [Security Advisories Database](https://github.com/FriendsOfPHP/security-advisories).
 
 ```
@@ -203,6 +208,13 @@ docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.3 phpinsi
 
 ```
 docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.3 phpstan analyse
+```
+
+#### Local PHP Security Checker ####
+[The Local PHP Security Checker](https://github.com/fabpot/local-php-security-checker) is a command line tool that checks if your PHP application depends on PHP packages with known security vulnerabilities. It uses the [Security Advisories Database](https://github.com/FriendsOfPHP/security-advisories).
+
+```
+docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.3 local-php-security-checker --path=/app/composer.lock
 ```
 
 ## Custom Tools ##
