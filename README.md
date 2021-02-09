@@ -88,7 +88,7 @@ docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 phpdcd 
 ```
 
 #### SensioLabs Security Checker ####
-**Warning** The tool is deprecated and you can use [Local PHP Security Checker](#local-php-security-checker) instead.
+**Warning** The tool is deprecated and you can use [Local PHP Security Checker](#local-php-security-checker) instead. Don't use this piece of software anymore as the underlying web service will stop working after the end of January 2021.
 
 The [SensioLabs Security Checker](https://github.com/sensiolabs/security-checker) is a command line tool that checks if your application uses dependencies with known security vulnerabilities. It uses the [Security Check Web service](https://security.symfony.com/) and the [Security Advisories Database](https://github.com/FriendsOfPHP/security-advisories).
 

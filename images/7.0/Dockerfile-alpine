@@ -33,11 +33,6 @@ RUN curl -L https://phar.phpunit.de/phpdcd.phar -o phpdcd.phar && \
     chmod +x phpdcd.phar && \
     mv phpdcd.phar /usr/local/bin/phpdcd
 
-# Install PHP Security Checker
-RUN curl -L http://get.sensiolabs.org/security-checker.phar -o security-checker.phar && \
-    chmod +x security-checker.phar && \
-    mv security-checker.phar /usr/local/bin/security-checker
-
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer -o composer-setup.php && \
     php composer-setup.php --install-dir=/usr/local/bin --filename=composer
