@@ -9,6 +9,6 @@ jobs:
     - name: Lint Dockerfile 5.6
       uses: luke142367/Docker-Lint-Action@v1.0.0
       with:
-        target: Dockerfile, Dockerfile-alpine
+        target: ./images/8.0/Dockerfile, ./images/8.0/Dockerfile-alpine
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
