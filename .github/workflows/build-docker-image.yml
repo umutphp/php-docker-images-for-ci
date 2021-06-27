@@ -63,39 +63,39 @@ jobs:
         name: Build And Push 7.1-alpine
         uses: docker/build-push-action@v2
         with:
-          context: ./images/7.1/
-          file: Dockerfile-alpine
+          context: .
+          file: ./images/7.1/Dockerfile-alpine
           push: true
           tags: umutphp/php-docker-images-for-ci:7.1-alpine
       -
-        name: Build And Push 7.2
+        name: Build And Push 7.2-alpine
         uses: docker/build-push-action@v2
         with:
-          context: ./images/7.2/
-          file: Dockerfile-alpine
+          context: .
+          file: ./images/7.2/Dockerfile-alpine
           push: true
           tags: umutphp/php-docker-images-for-ci:7.2-alpine
       -
         name: Build And Push 7.3-alpine
         uses: docker/build-push-action@v2
         with:
-          context: ./images/7.3/
-          file: Dockerfile-alpine
+          context: .
+          file: ./images/7.3/Dockerfile-alpine
           push: true
           tags: umutphp/php-docker-images-for-ci:7.3-alpine
       -
         name: Build And Push 7.4-alpine
         uses: docker/build-push-action@v2
         with:
-          context: ./images/7.4/
-          file: Dockerfile-alpine
+          context: .
+          file: ./images/7.4/Dockerfile-alpine
           push: true
           tags: umutphp/php-docker-images-for-ci:7.4-alpine
       -
         name: Build And Push 8.0-alpine
         uses: docker/build-push-action@v2
         with:
-          context: ./images/8.0/
-          file: Dockerfile-alpine
+          context: .
+          file: ./images/8.0/Dockerfile-alpine
           push: true
           tags: umutphp/php-docker-images-for-ci:8.0-alpine
