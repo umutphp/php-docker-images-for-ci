@@ -6,9 +6,13 @@ jobs:
     steps: 
     - name: Checkout
       uses: actions/checkout@master
-    - name: Lint Dockerfile 5.6
-      uses: luke142367/Docker-Lint-Action@v1.0.0
-      with:
-        target: ./images/8.0/Dockerfile, ./images/8.0/Dockerfile-alpine
+    - name: Dockerfile 8.0
+      uses: uditgaurav/docker-linter@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        DOCKERFILE: images/8.0/Dockerfile
+    - name: Dockerfile 8.0-alpine
+      uses: uditgaurav/docker-linter@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        DOCKERFILE: images/8.0/Dockerfile-alpine
