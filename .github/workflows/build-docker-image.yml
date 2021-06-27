@@ -25,6 +25,20 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
+        name: Build And Push 5.6
+        uses: docker/build-push-action@v2
+        with:
+          context: ./images/5.6/
+          push: true
+          tags: umutphp/php-docker-images-for-ci:5.6
+      -
+        name: Build And Push 7.0
+        uses: docker/build-push-action@v2
+        with:
+          context: ./images/7.0/
+          push: true
+          tags: umutphp/php-docker-images-for-ci:7.0
+      -
         name: Build And Push 7.1
         uses: docker/build-push-action@v2
         with:
@@ -59,6 +73,14 @@ jobs:
           context: ./images/8.0/
           push: true
           tags: umutphp/php-docker-images-for-ci:8.0
+      -
+        name: Build And Push 7.0-alpine
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: ./images/7.0/Dockerfile-alpine
+          push: true
+          tags: umutphp/php-docker-images-for-ci:7.0-alpine
       -
         name: Build And Push 7.1-alpine
         uses: docker/build-push-action@v2
