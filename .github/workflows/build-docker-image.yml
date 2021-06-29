@@ -25,48 +25,6 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
-        name: Build And Push 7.0
-        uses: docker/build-push-action@v2
-        with:
-          context: ./images/7.0/
-          push: true
-          tags: umutphp/php-docker-images-for-ci:7.0
-      -
-        name: Build And Push 7.1
-        uses: docker/build-push-action@v2
-        with:
-          context: ./images/7.1/
-          push: true
-          tags: umutphp/php-docker-images-for-ci:7.1
-      -
-        name: Build And Push 7.2
-        uses: docker/build-push-action@v2
-        with:
-          context: ./images/7.2/
-          push: true
-          tags: umutphp/php-docker-images-for-ci:7.2
-      -
-        name: Build And Push 7.3
-        uses: docker/build-push-action@v2
-        with:
-          context: ./images/7.3/
-          push: true
-          tags: umutphp/php-docker-images-for-ci:7.3
-      -
-        name: Build And Push 7.4
-        uses: docker/build-push-action@v2
-        with:
-          context: ./images/7.4/
-          push: true
-          tags: umutphp/php-docker-images-for-ci:7.4
-      -
-        name: Build And Push 8.0
-        uses: docker/build-push-action@v2
-        with:
-          context: ./images/8.0/
-          push: true
-          tags: umutphp/php-docker-images-for-ci:8.0
-      -
         name: Build And Push 7.0-alpine
         uses: docker/build-push-action@v2
         with:
@@ -114,3 +72,46 @@ jobs:
           file: ./images/8.0/Dockerfile-alpine
           push: true
           tags: umutphp/php-docker-images-for-ci:8.0-alpine
+      -
+        name: Build And Push 7.0
+        uses: docker/build-push-action@v2
+        with:
+          context: ./images/7.0/
+          push: true
+          tags: umutphp/php-docker-images-for-ci:7.0
+      -
+        name: Build And Push 7.1
+        uses: docker/build-push-action@v2
+        with:
+          context: ./images/7.1/
+          push: true
+          tags: umutphp/php-docker-images-for-ci:7.1
+      -
+        name: Build And Push 7.2
+        uses: docker/build-push-action@v2
+        with:
+          context: ./images/7.2/
+          push: true
+          tags: umutphp/php-docker-images-for-ci:7.2
+      -
+        name: Build And Push 7.3
+        uses: docker/build-push-action@v2
+        with:
+          context: ./images/7.3/
+          push: true
+          tags: umutphp/php-docker-images-for-ci:7.3
+      -
+        name: Build And Push 7.4
+        uses: docker/build-push-action@v2
+        with:
+          context: ./images/7.4/
+          push: true
+          tags: umutphp/php-docker-images-for-ci:7.4
+      -
+        name: Build And Push 8.0
+        uses: docker/build-push-action@v2
+        with:
+          context: ./images/8.0/
+          push: true
+          tags: umutphp/php-docker-images-for-ci:8.0
+      
