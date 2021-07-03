@@ -182,7 +182,7 @@ docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 cd /app
 ```
 
 #### infection ####
-[Infection](https://infection.github.io/) is a PHP mutation testing framework based on AST (Abstract Syntax Tree) mutations. It works as a CLI tool and can be executed from your project’s root. It requires atleast PHP 7.1.
+[Infection](https://infection.github.io/) is a PHP mutation testing framework based on AST (Abstract Syntax Tree) mutations. It works as a CLI tool and can be executed from your project’s root. It requires atleast PHP 7.1 and does not work with PHP 8.1.
 
 ```
 docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 infection

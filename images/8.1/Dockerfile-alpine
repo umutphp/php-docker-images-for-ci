@@ -122,8 +122,8 @@ RUN mkdir -p /tools/edsonmedina/php_testability && \
 RUN composer global require localheinz/composer-normalize
 
 # Install infection/infection for mutation testing
-RUN pecl install xdebug-3.0.1 && docker-php-ext-enable xdebug && docker-php-ext-configure zip && docker-php-ext-install zip
-RUN composer require infection/infection
+#RUN pecl install xdebug-3.0.4 && docker-php-ext-enable xdebug && docker-php-ext-configure zip && docker-php-ext-install zip
+#RUN composer require infection/infection
 
 # Install Deptrac
 RUN mkdir -p /tools/deptrac && \
