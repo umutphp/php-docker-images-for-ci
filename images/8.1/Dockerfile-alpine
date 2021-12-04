@@ -70,12 +70,6 @@ RUN mkdir -p /tools/php-parallel-lint/php-parallel-lint && \
     composer require --dev php-parallel-lint/php-parallel-lint && \
     cd -
 
-# Install composer.json fixer
-RUN mkdir -p /tools/kubawerlos/composer-json-fixer && \
-    cd /tools/kubawerlos/composer-json-fixer && \
-    composer require kubawerlos/composer-json-fixer && \
-    cd -
-
 # Install PHP Assumptions
 RUN mkdir -p /tools/rskuipers/php-assumptions && \
     cd /tools/rskuipers/php-assumptions && \

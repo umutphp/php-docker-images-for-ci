@@ -79,12 +79,6 @@ RUN mkdir -p /tools/povils/phpmnd && \
     composer require povils/phpmnd && \
     cd -
 
-# Install composer.json fixer
-RUN mkdir -p /tools/kubawerlos/composer-json-fixer && \
-    cd /tools/kubawerlos/composer-json-fixer && \
-    composer require kubawerlos/composer-json-fixer && \
-    cd -
-
 # Install PHP Assumptions
 RUN mkdir -p /tools/rskuipers/php-assumptions && \
     cd /tools/rskuipers/php-assumptions && \

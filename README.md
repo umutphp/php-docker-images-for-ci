@@ -19,7 +19,6 @@
     - [PHP VarDump Check](#php-vardump-check)
     - [PHP Parallel Lint](#php-parallel-lint)
     - [PHP Magic Number Detector (PHPMND)](#php-magic-number-detector-phpmnd)
-    - [composer.json Fixer](#composerjson-fixer)
     - [PHP Assumptions](#php-assumptions)
     - [churn-php](#churn-php)
     - [Fink](#fink)
@@ -130,13 +129,6 @@ docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 paralle
 
 ```
 docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 phpmnd /app
-```
-
-#### composer.json Fixer ####
-[composer.json fixer](https://github.com/kubawerlos/composer-json-fixer) is a tool for fixing and cleaning up `composer.json` file according to its [schema](https://getcomposer.org/doc/04-schema.md) and best practices.
-
-```
-docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 composer-json-fixer --dry-run /app
 ```
 
 #### PHP Assumptions ####
