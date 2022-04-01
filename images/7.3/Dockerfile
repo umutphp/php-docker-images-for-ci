@@ -152,7 +152,7 @@ RUN mkdir -p /tools/local-php-security-checker && \
     mv local-php-security-checker /usr/local/bin/local-php-security-checker
 
 # Unset COMPOSER_BIN_DIR
-ENV COMPOSER_BIN_DIR=""
+ENV COMPOSER_BIN_DIR="vendor/bin"
 
 # Unset the entry point
 ENTRYPOINT []
