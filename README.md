@@ -31,6 +31,7 @@
     - [PHP Insights](#php-insights)
     - [PHPStan](#phpstan)
     - [Local PHP Security Checker](#local-php-security-checker)
+    - [Pint](#pint)
 - [Custom Tools](#custom-tools)
 - [How to use images locally](#how-to-use-images-locally)
 - [How to Use in Gitlab CI](#how-to-use-in-gitlab-ci)
@@ -209,6 +210,13 @@ docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.3 phpstan
 
 ```
 docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.3 local-php-security-checker --path=/app/composer.lock
+```
+
+#### Pint ####
+[Pint](https://github.com/laravel/pint) is an opinionated PHP code style fixer for minimalists. Pint is built on top of [PHP-CS-Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) and makes it simple to ensure that your code style stays clean and consistent. Pint requires atleast PHP 8.0.
+
+```
+docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:8.1 pint
 ```
 
 ## Custom Tools ##
