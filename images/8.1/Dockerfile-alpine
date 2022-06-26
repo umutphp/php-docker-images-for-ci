@@ -88,6 +88,12 @@ RUN mkdir -p /tools/dantleech/fink && \
     composer require --dev dantleech/fink && \
     cd -
 
+# Install Pint
+RUN mkdir -p /tools/laravel/pint && \
+    cd /tools/laravel/pint && \
+    composer require laravel/pint --dev && \
+    cd -
+
 # Add update script
 ADD https://raw.githubusercontent.com/umutphp/php-docker-images-for-ci/master/scripts/update.sh /update.sh
 RUN chmod +x /update.sh
