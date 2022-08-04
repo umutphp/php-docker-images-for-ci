@@ -129,7 +129,7 @@ RUN mkdir -p /tools/edsonmedina/php_testability && \
     cd -
 
 # Install composer-normalize
-RUN composer global require ergebnis/composer-normalize
+RUN composer config --no-plugins allow-plugins.ergebnis/composer-normalize true && composer global require ergebnis/composer-normalize
 
 # Install Deptrac
 RUN mkdir -p /tools/deptrac && \
