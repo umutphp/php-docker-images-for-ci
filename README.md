@@ -168,7 +168,7 @@ docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 testabi
 ```
 
 #### composer-normalize ####
-[composer-normalize](https://github.com/localheinz/composer-normalize) Provides a composer plugin for normalizing `composer.json`. It requires atleast PHP 7.1.
+[composer-normalize](https://github.com/ergebnis/composer-normalize) Provides a composer plugin for normalizing `composer.json`. It requires atleast PHP 7.1.
 
 ```
 docker run -v /path/to/project:/app umutphp/php-docker-images-for-ci:7.1 cd /app && composer normalize
