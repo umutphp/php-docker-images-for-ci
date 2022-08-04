@@ -138,7 +138,7 @@ RUN mkdir -p /tools/deptrac && \
 # Install PHP Insights
 RUN mkdir -p /tools/nunomaduro/phpinsights && \
     cd /tools/nunomaduro/phpinsights && \
-    composer config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer  true && composer global require nunomaduro/phpinsights && \
+    composer global config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer  true && composer global require nunomaduro/phpinsights && \
     cd -
 
 # Install phpstan
