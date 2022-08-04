@@ -15,7 +15,7 @@ RUN docker-php-ext-install \
     xml \
     bcmath
 
-RUN RUN apk add icu-dev && \
+RUN apk add icu-dev && \
     docker-php-ext-configure intl && \
     docker-php-ext-install intl \
     rm -rf /var/cache/apk/*
