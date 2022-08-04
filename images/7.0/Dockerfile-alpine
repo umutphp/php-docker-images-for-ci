@@ -18,7 +18,7 @@ RUN docker-php-ext-install \
 
 RUN apk add icu-dev && \
     docker-php-ext-configure intl && \
-    docker-php-ext-install intl \
+    docker-php-ext-install intl && \
     rm -rf /var/cache/apk/*
 
 # Install PHP Code Sniffer
