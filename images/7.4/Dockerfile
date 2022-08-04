@@ -12,7 +12,14 @@ RUN docker-php-ext-install \
     zip \
     pdo_mysql \
     mysqli \
-    xml
+    xml \
+    bcmath
+
+RUN apt-get update && \
+    apt-get install -y zlib1g-dev libicu-dev g++ && \
+    rm -rf /var/lib/apt/lists/* && \
+    docker-php-ext-configure intl && \
+    docker-php-ext-install intl
 
 # Install PHP Code Sniffer
 RUN curl -L https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar -o phpcs && \

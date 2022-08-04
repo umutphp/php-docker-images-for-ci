@@ -13,7 +13,13 @@ RUN docker-php-ext-install \
     zip \
     pdo_mysql \
     mysqli \
-    xml
+    xml \
+    bcmath
+
+RUN RUN apk add icu-dev && \
+    docker-php-ext-configure intl && \
+    docker-php-ext-install intl \
+    rm -rf /var/cache/apk/*
 
 # Install PHP Code Sniffer
 RUN curl -L https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar -o phpcs && \

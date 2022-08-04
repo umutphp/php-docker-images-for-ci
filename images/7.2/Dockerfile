@@ -12,7 +12,14 @@ RUN docker-php-ext-install \
     zip \
     pdo_mysql \
     mysqli \
-    xml
+    xml \
+    bcmath
+
+RUN apt-get update && \
+    apt-get install -y zlib1g-dev libicu-dev g++ && \
+    rm -rf /var/lib/apt/lists/* && \
+    docker-php-ext-configure intl && \
+    docker-php-ext-install intl
 
 RUN pecl install mcrypt-1.0.1 && \
     docker-php-ext-enable mcrypt

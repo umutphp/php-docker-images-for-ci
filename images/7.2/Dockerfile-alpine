@@ -12,7 +12,13 @@ RUN docker-php-ext-install \
     zip \
     pdo_mysql \
     mysqli \
-    xml
+    xml \
+    bcmath
+
+RUN RUN apk add icu-dev && \
+    docker-php-ext-configure intl && \
+    docker-php-ext-install intl \
+    rm -rf /var/cache/apk/*
 
 RUN pecl install mcrypt-1.0.1 && \
     docker-php-ext-enable mcrypt
