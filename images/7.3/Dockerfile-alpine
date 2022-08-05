@@ -138,12 +138,6 @@ RUN mkdir -p /tools/nunomaduro/phpinsights && \
     composer global config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer  true && composer global require nunomaduro/phpinsights && \
     cd -
 
-# Install composer-unused
-RUN mkdir -p /tools/icanhazstring/composer-unused && \
-    cd /tools/icanhazstring/composer-unused && \
-    composer global config --no-plugins allow-plugins.icanhazstring/composer-unused  true && composer global require icanhazstring/composer-unused --with-all-dependencies  && \
-    cd -
-
 # Install phpstan
 RUN mkdir -p /tools/phpstan/phpstan && \
     cd /tools/phpstan/phpstan && \

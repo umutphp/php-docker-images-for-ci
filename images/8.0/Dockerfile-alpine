@@ -136,12 +136,6 @@ RUN mkdir -p /tools/deptrac && \
     curl -LS https://github.com/sensiolabs-de/deptrac/releases/download/0.6.0/deptrac.phar -o deptrac.phar && \
     chmod +x deptrac.phar && mv deptrac.phar /tools/deptrac/deptrac
 
-# Install composer-unused
-RUN mkdir -p /tools/icanhazstring/composer-unused && \
-    cd /tools/icanhazstring/composer-unused && \
-    composer global config --no-plugins allow-plugins.icanhazstring/composer-unused  true && composer global require icanhazstring/composer-unused --with-all-dependencies  && \
-    cd -
-
 # Install phpstan
 RUN mkdir -p /tools/phpstan/phpstan && \
     cd /tools/phpstan/phpstan && \
