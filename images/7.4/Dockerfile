@@ -146,7 +146,7 @@ RUN mkdir -p /tools/nunomaduro/phpinsights && \
 # Install composer-unused
 RUN mkdir -p /tools/icanhazstring/composer-unused && \
     cd /tools/icanhazstring/composer-unused && \
-    composer global config --no-plugins allow-plugins.icanhazstring/composer-unused  true && composer global require icanhazstring/composer-unused && \
+    composer global config --no-plugins allow-plugins.icanhazstring/composer-unused  true && composer global require icanhazstring/composer-unused --with-all-dependencies  && \
     cd -
 
 # Install phpstan
