@@ -140,7 +140,7 @@ RUN mkdir -p /tools/deptrac && \
 # Install composer-unused
 RUN mkdir -p /tools/icanhazstring/composer-unused && \
     cd /tools/icanhazstring/composer-unused && \
-    composer config --no-plugins allow-plugins.icanhazstring/composer-unused  true && composer require --dev icanhazstring/composer-unused && \
+    composer global config --no-plugins allow-plugins.icanhazstring/composer-unused  true && composer global require icanhazstring/composer-unused && \
     cd -
 
 # Install phpstan
