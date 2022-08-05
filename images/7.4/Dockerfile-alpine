@@ -129,7 +129,7 @@ RUN composer global config --no-plugins allow-plugins.ergebnis/composer-normaliz
 
 # Install infection/infection for mutation testing
 RUN pecl install xdebug-3.0.1 && docker-php-ext-enable xdebug && docker-php-ext-configure zip && docker-php-ext-install zip
-RUN composer config --no-plugins allow-plugins.infection/extension-installer true && composer require infection/infection
+RUN composer global config --no-plugins allow-plugins.infection/extension-installer true && composer require infection/infection
 
 # Install Deptrac
 RUN mkdir -p /tools/deptrac && \
@@ -139,7 +139,7 @@ RUN mkdir -p /tools/deptrac && \
 # Install PHP Insights
 RUN mkdir -p /tools/nunomaduro/phpinsights && \
     cd /tools/nunomaduro/phpinsights && \
-    composer global config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer  true && composer global require nunomaduro/phpinsights && \
+    composer global config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer true && composer global require nunomaduro/phpinsights && \
     cd -
 
 # Install phpstan
