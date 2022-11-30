@@ -54,7 +54,8 @@ The tools that are installed by Composer are isolated by using different folder 
 - umutphp/php-docker-images-for-ci:7.3 (PHP 7.3.29)
 - umutphp/php-docker-images-for-ci:7.4 (PHP 7.4.21)
 - umutphp/php-docker-images-for-ci:8.0 (PHP 8.0.8)
-- umutphp/php-docker-images-for-ci:8.1 (PHP 8.1.0alpha2)
+- umutphp/php-docker-images-for-ci:8.1 (PHP 8.1.13)
+- umutphp/php-docker-images-for-ci:8.2 (PHP 8.2.0RC7)
 
 ## List of Alpine Based PHP Images ##
 - umutphp/php-docker-images-for-ci:7.0-alpine (PHP 7.0.33)
@@ -63,7 +64,8 @@ The tools that are installed by Composer are isolated by using different folder 
 - umutphp/php-docker-images-for-ci:7.3-alpine (PHP 7.3.29)
 - umutphp/php-docker-images-for-ci:7.4-alpine (PHP 7.4.21)
 - umutphp/php-docker-images-for-ci:8.0-alpine (PHP 8.0.8)
-- umutphp/php-docker-images-for-ci:8.1-alpine (PHP 8.1.0alpha2-alpine)
+- umutphp/php-docker-images-for-ci:8.1-alpine (PHP 8.1.13-alpine)
+- umutphp/php-docker-images-for-ci:8.1-alpine (PHP 8.2.0RC7-alpine)
 
 ## List of CI Tools ##
 
