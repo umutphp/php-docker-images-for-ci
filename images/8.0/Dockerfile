@@ -1,4 +1,4 @@
-FROM php:8.0.26
+FROM php:8.0.28
 
 # disable interactive functions
 ENV DEBIAN_FRONTEND noninteractive
