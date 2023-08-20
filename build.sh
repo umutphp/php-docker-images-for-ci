@@ -20,3 +20,15 @@ do
     echo "Image is pushed to remote"
     echo "********************************************************"
 done
+
+#build latest tag
+echo "********************************************************"
+echo "Building image php:latest
+echo "********************************************************"
+cd images/8.2/
+docker build -t umutphp/php-docker-images-for-ci:latest .
+docker push umutphp/php-docker-images-for-ci:latest
+cd -
+echo "********************************************************"
+echo "Image is pushed to remote"
+echo "********************************************************"
