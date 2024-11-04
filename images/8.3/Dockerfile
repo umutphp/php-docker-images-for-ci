@@ -1,7 +1,7 @@
 FROM php:8.3.13
 
 # disable interactive functions
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
     apt-get -y install --no-install-recommends libmcrypt-dev libreadline-dev zlib1g-dev libxml2-dev libzip-dev apt-utils curl git zip unzip libonig-dev && \

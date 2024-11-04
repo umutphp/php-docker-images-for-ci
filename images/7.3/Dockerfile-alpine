@@ -1,7 +1,7 @@
 FROM php:7.3.33-alpine
 
 # disable interactive functions
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apk --no-cache add libzip-dev && \
     apk --no-cache --update add --virtual .build-deps gcc make g++ zlib-dev libmcrypt-dev libxml2-dev libzip-dev curl git zip unzip oniguruma-dev autoconf && \
