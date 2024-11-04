@@ -1,7 +1,7 @@
 FROM php:5.6.6
 
 # disable interactive functions
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
     apt-get -y --no-install-recommends install libmcrypt-dev libreadline-dev zlib1g-dev libxml2-dev apt-utils curl git zip unzip && \
