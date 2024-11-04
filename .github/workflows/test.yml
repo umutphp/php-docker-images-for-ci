@@ -1,0 +1,8 @@
+name: Build Docker Images
+
+on:
+  pull_request:
+
+jobs:
+  build-images:
+    uses: ./.github/workflows/build-docker-image.yml
