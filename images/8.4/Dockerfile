@@ -1,11 +1,11 @@
-FROM php:8.0.29-alpine
+FROM php:8.4.3
 
 # disable interactive functions
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apk --no-cache add libzip-dev && \
-    apk --no-cache --update add --virtual .build-deps gcc make g++ zlib-dev libmcrypt-dev libxml2-dev libzip-dev curl git zip unzip oniguruma-dev autoconf && \
-    rm -rf /var/cache/apk/*
+RUN apt-get update && \
+    apt-get -y install --no-install-recommends libmcrypt-dev libreadline-dev zlib1g-dev libxml2-dev libzip-dev apt-utils curl git zip unzip libonig-dev && \
+    rm -rf /var/lib/apt/lists/*
 
 RUN docker-php-ext-install \
     mbstring \
@@ -15,10 +15,11 @@ RUN docker-php-ext-install \
     xml \
     bcmath
 
-RUN apk add icu-dev && \
+RUN apt-get update && \
+    apt-get install -y zlib1g-dev libicu-dev g++ && \
+    rm -rf /var/lib/apt/lists/* && \
     docker-php-ext-configure intl && \
-    docker-php-ext-install intl && \
-    rm -rf /var/cache/apk/*
+    docker-php-ext-install intl
 
 # Install PHP Code Sniffer
 RUN curl -L https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar -o phpcs && \
@@ -128,8 +129,8 @@ RUN mkdir -p /tools/edsonmedina/php_testability && \
 RUN composer global config --no-plugins allow-plugins.ergebnis/composer-normalize true && composer global require ergebnis/composer-normalize
 
 # Install infection/infection for mutation testing
-RUN pecl install xdebug-3.0.1 && docker-php-ext-enable xdebug && docker-php-ext-configure zip && docker-php-ext-install zip
-RUN composer global config --no-plugins allow-plugins.infection/extension-installer true && composer global require infection/infection:^0.27
+RUN pecl install xdebug-3.3.0alpha3 && docker-php-ext-enable xdebug
+RUN composer global config --no-plugins allow-plugins.infection/extension-installer true && composer global require infection/infection
 
 # Install Deptrac
 RUN mkdir -p /tools/deptrac && \
@@ -141,9 +142,6 @@ RUN mkdir -p /tools/phpstan/phpstan && \
     cd /tools/phpstan/phpstan && \
     composer require --dev phpstan/phpstan && \
     cd -
-
-# Remove build dependencies
-RUN apk del .build-deps
 
 # Install local-php-security-checker
 RUN mkdir -p /tools/local-php-security-checker && \
