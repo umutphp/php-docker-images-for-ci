@@ -130,7 +130,7 @@ RUN composer global config --no-plugins allow-plugins.ergebnis/composer-normaliz
 
 # Install infection/infection for mutation testing
 RUN pecl install xdebug-3.0.1 && docker-php-ext-enable xdebug
-RUN composer global config --no-plugins allow-plugins.infection/extension-installer true && composer global require infection/infection:^0.27
+RUN composer global config --no-plugins allow-plugins.infection/extension-installer true && composer global require infection/infection:0.26.7
 
 # Install Deptrac
 RUN mkdir -p /tools/deptrac && \
