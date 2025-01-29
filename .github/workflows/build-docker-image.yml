@@ -77,7 +77,14 @@ jobs:
           context: .
           file: ./images/8.3/Dockerfile-alpine
           push: true
-          tags: umutphp/php-docker-images-for-ci:8.3-alpine,umutphp/php-docker-images-for-ci:latest-alpine
+          tags: umutphp/php-docker-images-for-ci:8.3-alpine
+      - name: Build And Push 8.4-alpine
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ./images/8.4/Dockerfile-alpine
+          push: true
+          tags: umutphp/php-docker-images-for-ci:8.4-alpine,umutphp/php-docker-images-for-ci:latest-alpine
       - name: Build And Push 7.1
         uses: docker/build-push-action@v6
         with:
@@ -125,4 +132,10 @@ jobs:
         with:
           context: ./images/8.3/
           push: true
-          tags: umutphp/php-docker-images-for-ci:8.3,umutphp/php-docker-images-for-ci:latest
+          tags: umutphp/php-docker-images-for-ci:8.3
+      - name: Build And Push 8.4
+        uses: docker/build-push-action@v6
+        with:
+          context: ./images/8.4/
+          push: true
+          tags: umutphp/php-docker-images-for-ci:8.4,umutphp/php-docker-images-for-ci:latest

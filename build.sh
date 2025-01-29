@@ -25,7 +25,7 @@ done
 echo "********************************************************"
 echo "Building image php:latest
 echo "********************************************************"
-cd images/8.2/
+cd images/8.4/
 docker build -t umutphp/php-docker-images-for-ci:latest .
 docker push umutphp/php-docker-images-for-ci:latest
 cd -
