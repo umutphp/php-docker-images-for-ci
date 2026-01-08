@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## declare an array variable
-declare -a array=("5.6" "7.0" "7.1" "7.2" "7.3" "7.4" "8.0" "8.1" "8.2" "8.3")
+declare -a array=("5.6" "7.0" "7.1" "7.2" "7.3" "7.4" "8.0" "8.1" "8.2" "8.3" "8.4" "8.5")
 
 # get length of an array
 arraylength=${#array[@]}
@@ -25,7 +25,7 @@ done
 echo "********************************************************"
 echo "Building image php:latest
 echo "********************************************************"
-cd images/8.4/
+cd images/8.5/
 docker build -t umutphp/php-docker-images-for-ci:latest .
 docker push umutphp/php-docker-images-for-ci:latest
 cd -
