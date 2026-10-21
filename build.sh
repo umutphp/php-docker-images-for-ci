@@ -23,7 +23,7 @@ done
 
 #build latest tag
 echo "********************************************************"
-echo "Building image php:latest
+echo "Building image php:latest"
 echo "********************************************************"
 cd images/8.5/
 docker build -t umutphp/php-docker-images-for-ci:latest .
